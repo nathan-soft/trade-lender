@@ -153,6 +153,10 @@ body{
     background-color: transparent !important;
 }
 
+.table td {
+    vertical-align: middle;
+}
+
 
 
 
