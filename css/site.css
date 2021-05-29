@@ -243,9 +243,20 @@ body{
     width: auto !important;
 }
 
+@media (max-width:520px) {
+    .page-title-bar {
+        flex-direction: column!important;
+        margin-bottom: 1rem !important;
+    }
+
+    .page-title-bar .actions {
+        margin-top: .5rem !important;
+    }
+}
+
 @media (max-width:991px) {
     .main {
-         margin-left: 0 !important;
+        margin-left: 0 !important;
     }
 }
 
