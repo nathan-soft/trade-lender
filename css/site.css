@@ -445,6 +445,7 @@ form .btn-secondary:active {
 /******************************NOTIFICATION PAGE*********************************/
 .notification-item .card-body {
     line-height: 17px;
+    color: #130F26;
 }
 
 .notification-item .notif-status{
@@ -459,7 +460,7 @@ form .btn-secondary:active {
 }
 
 .notif-description{
-    color:#130F26;
+    color:#0566C4
 }
 
 
