@@ -443,7 +443,7 @@ form .btn-secondary:active {
 }
 
 /******************************NOTIFICATION PAGE*********************************/
-#notifications .card-body {
+.notification-item .card-body {
     line-height: 17px;
 }
 
