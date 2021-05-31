@@ -107,16 +107,16 @@ body{
 }
 
 .btn-primary:focus {
-    border: 8px solid #B8C1EF !important;
+    box-shadow: 0 0 0 4px #B8C1EF;
 }
 
 .btn-secondary:focus {
     color: #24348B !important;
-    border: 8px solid #B8C1EF !important;
+    box-shadow: 0 0 0 4px #B8C1EF;
 }
 
 .btn-subtle:focus {
-    border: 8px solid #EFF0F7 !important;
+    box-shadow: 0 0 0 4px #EFF0F7;
 }
 
 .btn-text:focus {
@@ -170,30 +170,30 @@ body{
     top: 0;
     left: 0;
     margin-left: 0;
-    z-index: 999;
+    z-index: 1052;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     overflow-x: hidden;
+    padding-bottom: 50px;
 }
 
 @media (max-width:991px) {
     .sidebar-wrapper {
-        margin-left: -248px;
+        width: 0;
     }
-}
-
-.sidebar-wrapper{
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    padding-bottom: 50px;
 }
 
 .sidebar-wrapper .closebtn {
     position: absolute;
     top: 0;
     direction: ltr;
-    right: 0;
+    right: 15px;
     font-size: 36px;
+}
+
+.sidebar-wrapper .navbar {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
 }
 
 .sidebar-wrapper .navbar>.navbar-nav > hr {
@@ -237,6 +237,7 @@ body{
     margin-left: 248px;
     transition: margin-left .5s;
     padding: 16px;
+    padding-bottom: 50px;
 }
 
 .page-title-bar h4 {
@@ -247,18 +248,170 @@ body{
     width: auto !important;
 }
 
-@media (max-width:520px) {
-    .page-title-bar {
-        flex-direction: column!important;
-        margin-bottom: 1rem !important;
-    }
-
-    .page-title-bar .actions {
-        margin-top: .5rem !important;
-    }
+.main .go-back {
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 23px;
 }
 
+.card {
+    border-radius: 8px;
+}
+
+/**********************************STYLES FOR TABLE GRIDS*************************/
+
+.table thead {
+    border-radius: 8px !important;
+}
+
+.table .thead-light th {
+    color: #6E6893;
+    background-color: #EEF0F7;
+    border-color: #EEF0F7;
+    font-size: 14px;
+}
+
+.table tbody td .btn {
+    color: #0566C4;
+    border: 1px solid #0566C4;
+    border-radius: 3px !important;
+    vertical-align: middle;
+}
+
+.pagination .page-item {
+    margin-right: 6px;
+}
+
+.pagination .page-item:last-of-type {
+    margin-right: 0;
+}
+
+.pagination .page-link{
+    border: 1px solid #24348B;
+    color:#24348B;
+    padding-left: 13px;
+    background-color: #E5E5E5;
+    padding-right: 13px;
+    border-radius: 3px;
+}
+
+/*************************STYLES FOR FORMS*************************/
+label{
+    color: #000000;
+}
+.form-control {
+    color: #000000;
+    background-color: #E5E5E5;
+    border: 1px solid #CCC3D9;
+    border-radius: 10px;
+}
+.form-control:focus {
+    color: #000000;
+    background-color: #FCFCFC;
+    border-color: #14142B;
+    box-shadow: none;
+}
+
+.form-control::placeholder{
+    color:#6E7191!important;
+}
+.form-control::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color:#6E7191 !important;
+}
+input[type=date]::-webkit-datetime-edit {
+    color:#6E7191 !important;
+}
+
+form .btn {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+form .btn-secondary,
+form .btn-secondary:active {
+    background-color: #E5E5E5 !important;
+}
+
+/****STYLES FOR CUSTOM ALERT(S)*************************/
+
+#alertModal .closebtn {
+    position: absolute;
+    top: 18px;
+    direction: ltr;
+    right: 18px;
+    font-size: 30px;
+}
+#alertModal .modal-content {
+    border-radius: 8px;
+}
+#alertModal .modal-content .modal-body {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#alertModal .modal-content .modal-body p {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+#alertModal .modal-content .modal-body .btn {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+
+/***************MEDIA QUERIES FOR GLOBAL ELEMENTS/COMPONENTS THROUGH OUT THE MAIN SECTION OF ALL PAGES************/
+
 @media (max-width:991px) {
+    @media (max-width:424px) {
+        #alertModal .modal-content .modal-body p {
+            width: 100%;
+        }
+
+        #alertModal .closebtn {
+            top: 15px;
+            right: 15px;
+        }
+    }
+
+    @media (max-width:520px) {
+        .page-title-bar {
+            flex-direction: column !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .page-title-bar .actions {
+            margin-top: .5rem !important;
+        }
+    }
+
+    @media (min-width: 401px) and (max-width: 575px) {
+        form {
+            width: 80%;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+         @media (max-width: 470px) {
+             form {
+                 width: 90%;
+             }
+         }
+    }
+
+    @media (max-width: 580px) {
+        .form-row .col-sm-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+
+        .form-row .col-sm-6:first-of-type {
+            margin-bottom: 16px;
+        }
+    }
+
     .main {
         margin-left: 0 !important;
     }
@@ -289,23 +442,12 @@ body{
     }
 }
 
-.loan-applications .table thead {
-    border-radius: 8px !important;
+/******************************NOTIFICATION PAGE*********************************/
+#notifications .card-body {
+    line-height: 17px;
 }
 
-.loan-applications .table .thead-light th {
-    color: #6E6893;
-    background-color: #EEF0F7;
-    border-color: #EEF0F7;
-    font-size: 14px;
-}
 
-.loan-applications .table tbody td .btn {
-    color: #0566C4;
-    border: 1px solid #0566C4;
-    border-radius: 3px!important;
-    vertical-align: middle;
-}
 
 
 
