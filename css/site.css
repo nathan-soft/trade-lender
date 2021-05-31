@@ -447,6 +447,17 @@ form .btn-secondary:active {
     line-height: 17px;
 }
 
+.notification-item .notif-status{
+    font-size:12px;
+}
+
+.notification-item .notif-status-success {
+    color: #00BA88;
+}
+.notification-item .notif-status-error {
+    color: #ED2E7E;
+}
+
 
 
 
