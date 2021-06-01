@@ -248,15 +248,41 @@ body{
     width: auto !important;
 }
 
+.main .go-back-group {
+    width: calc(100% - .3rem);
+    max-width: calc(100% - .3rem);
+}
+
 .main .go-back {
     font-size: 14px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 17px;
     margin-bottom: 23px;
 }
 
+main .go-back-group > i{
+    margin-top:17px;
+}
+
+
 .card {
     border-radius: 8px;
+}
+
+.tooltip-inner {
+    color: #FFFFFF;
+    background: #24348B;
+    border-radius: 2px;
+}
+
+.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: #24348B;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+    border-top-color: #24348B;
 }
 
 /**********************************STYLES FOR TABLE GRIDS*************************/
@@ -270,6 +296,7 @@ body{
     background-color: #EEF0F7;
     border-color: #EEF0F7;
     font-size: 14px;
+    vertical-align: middle;
 }
 
 .table tbody td .btn {
@@ -301,13 +328,13 @@ label{
     color: #000000;
 }
 .form-control {
-    color: #000000;
+    color: #4E4B66;
     background-color: #E5E5E5;
     border: 1px solid #CCC3D9;
     border-radius: 10px;
 }
 .form-control:focus {
-    color: #000000;
+    color: #4E4B66;
     background-color: #FCFCFC;
     border-color: #14142B;
     box-shadow: none;
@@ -363,6 +390,13 @@ form .btn-secondary:active {
 
 
 /***************MEDIA QUERIES FOR GLOBAL ELEMENTS/COMPONENTS THROUGH OUT THE MAIN SECTION OF ALL PAGES************/
+
+@media (min-width: 768px){
+    .main .go-back-group {
+        width: calc(83.333334% + .5rem);
+        max-width: calc(83.333334% + .5rem);
+    }
+}
 
 @media (max-width:991px) {
     @media (max-width:424px) {
@@ -461,6 +495,43 @@ form .btn-secondary:active {
 
 .notif-description{
     color:#0566C4
+}
+
+/******************************GUARANTORS INDEX PAGE*********************************/
+table#guarantors{
+    color: #20212B;
+}
+
+.search-group .form-control{
+    padding-right: 20px;
+}
+
+.search-group .fa {
+    position: absolute;
+    top: .8rem;
+    right: 24px;
+    font-size: 13px;
+    color: #24348B;
+}
+
+#guarantorView .card{
+    color: #130F26;
+    margin-bottom: .5rem;
+}
+
+#guarantorView .card .card-title{
+    font-size: 13.5px;
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    #guarantorView .col-sm-6 {
+        flex: 0 0 calc(50% - 0.25rem);
+        max-width: calc(50% - 0.25rem);
+    }
+
+    #guarantorView > .col-sm-6:first-of-type {
+        margin-right: 0.5rem;
+    }
 }
 
 

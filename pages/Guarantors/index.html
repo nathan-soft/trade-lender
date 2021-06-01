@@ -62,140 +62,120 @@
     <main class="main">
         <section class="page-title-bar d-flex flex-wrap justify-content-between mb-3">
             <h4 class="page-title font-weight-bold">
-                <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Dashboard
+                <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Guarantors
             </h4>
             <div class="actions d-flex flex-wrap ml-auto">
-                <button class="btn btn-primary" data-toggle="modal" data-target="#alertModal" data-backdrop="static">
-                    New Loan Request
-                </button>
-                <select name="" id="" class="custom-select ml-1">
-                    <option value="This Month" selected>This Month</option>
-                    <option value="This Year">This Year</option>
-                    <option value="Custom Date">Custom Date</option>
-                </select>
+                <a href="create.html" class="btn btn-primary">
+                    Add New Guarantor
+                </a>
             </div>
         </section>
-        <section class="row loan-stats justify-content-sm-cefnter justify-content-md-start">
-            <div class="col-lg-4 col-md-6 col-sm-6 mt-md-0 mt-2">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text mb-1">Loan amount collected</p>
-                        <h4 class="card-title font-weight-bold mb-0">₦50,000,000,000.00</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mt-md-0 mt-2">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text mb-1">Loan amount not paid</p>
-                        <h4 class="card-title font-weight-bold mb-0">₦50,000,000,000.00</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 mt-lg-0 mt-2">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text mb-1">Loan under process</p>
-                        <h4 class="card-title font-weight-bold mb-0">₦50,000,000,000.00</h4>
-                    </div>
-                </div>
+
+        <section class="row">
+            <div class="col-md-4 col-sm-6 search-group">
+                <input class="form-control py-2 border-right-0 border" type="search" id="example-search-input">
+                <span class="fa fa-search"></span>
             </div>
         </section>
-        <section class="mt-4">
-            <h6 class="page-title font-weight-bold d-inline-block mr-1">
-                Loan Applications
-            </h6>
-            <button class="btn btn-primary">View All</button>
-        </section>
-        <section class="table-responsive-lg mt-3 loan-applications">
-            <table class="table">
+
+        <section class="table-responsive-lg mt-3">
+            <table id="guarantors" class="table">
                 <thead class="thead-light">
                     <tr>
-                        <th>REASON</th>
-                        <th>AMOUNT</th>
-                        <th>LOAN TENOR</th>
-                        <th>INTEREST(%)</th>
-                        <th>STATUS</th>
+                        <th>FULL NAME</th>
+                        <th>EMAIL</th>
+                        <th>PHONE NUMBER</th>
                         <th>ACTION</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white">
                     <tr>
-                        <td class="text-primary">Marketing</td>
-                        <td>₦50,000,000,000.00</td>
-                        <td>90 days</td>
-                        <td>15%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
+                        <td class="text-primary">John Doe</td>
+                        <td>janecopper@gmail.com</td>
+                        <td>(808) 555-0111</td>
+                        <td>
+                            <i class="fa fa-eye text-primary" 
+                             data-tooltip="tooltip" 
+                             data-placement="bottom" 
+                             title="View"
+                            ></i>
+                            <i class="fa fa-trash text-primary" 
+                             data-tooltip="tooltip" 
+                             data-placement="bottom"
+                             data-toggle="modal"
+                             data-target="#alertModal" 
+                             title="Delete"
+                            ></i>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="text-primary">Pay a bill</td>
-                        <td>₦250,000.00</td>
-                        <td>30 days</td>
-                        <td>5%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
+                        <td class="text-primary">Wade Warren</td>
+                        <td>wadewarren@gmail.com</td>
+                        <td>(207) 555-0119</td>
+                        <td>
+                            <i class="fa fa-eye text-primary" 
+                             data-tooltip="tooltip" 
+                             data-placement="bottom" 
+                             title="View"
+                            ></i>
+                            <i class="fa fa-trash text-primary" 
+                             data-tooltip="tooltip" 
+                             data-placement="bottom"
+                             data-toggle="modal"
+                             data-target="#alertModal" 
+                             title="Delete"
+                            ></i>
+                        </td>
                     </tr>
                     <tr>
-                        <td class="text-primary">Pay a supplier</td>
-                        <td>₦1,000,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay salary</td>
-                        <td>₦450,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Expand my business</td>
-                        <td>₦5,000,000.00</td>
-                        <td>30 days</td>
-                        <td>5%</td>
-                        <td class="text-danger">Declined</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay salary</td>
-                        <td>₦450,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-danger">Declined</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay salary</td>
-                        <td>₦450,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-danger">Declined</td>
-                        <td><button class="btn btn-sm btn-subtle">View More</button></td>
+                        <td class="text-primary">Esther Howard</td>
+                        <td>estherhoward@yahoo.com</td>
+                        <td>(303) 555-0105</td>
+                        <td>
+                            <i class="fa fa-eye text-primary" 
+                             data-tooltip="tooltip" 
+                             data-placement="bottom" 
+                             title="View"
+                            ></i>
+                            <i class="fa fa-trash text-primary" 
+                             data-tooltip="tooltip"
+                             data-toggle="modal"
+                             data-target="#alertModal" 
+                             data-placement="bottom" 
+                             title="Delete"
+                            ></i>
+                        </td>
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <!-- PAGINATION SECTION -->
+        <section>
+            <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
         </section>
 
         <!-- The Modal -->
         <div class="modal fade" id="alertModal">
             <div class="modal-dialog modal-dialog-scrollable">
                 <div class="modal-content">
-
                     <!-- Modal body -->
                     <div class="modal-body text-center">
                         <span class="fa fa-times-circle closebtn" data-dismiss="modal"></span>
                         <h5 class="modal-title font-weight-bold mb-2">
-                            Add a Guarantor
+                            Delete Guarantor?
                         </h5>
-                        <p>
-                            You need to add a guarantor before you can request for a loan
+                        <p class="w-50">
+                            Are you sure you want to delete this guarantor?
                         </p>
                         <button type="button" class="btn btn-secondary mr-1" data-dismiss="modal">Cancel</button>
-                        <a href="#" class="btn btn-primary ml-1">Add</a>
+                        <a href="../Guarantors/create.html" class="btn btn-primary ml-1">Confirm</a>
                     </div>
                 </div>
             </div>
@@ -205,6 +185,11 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.bundle.min.js"></script>
     <script src="../../js/site.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-tooltip="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>
