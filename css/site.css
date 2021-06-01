@@ -334,10 +334,10 @@ label{
     border-radius: 10px;
 }
 .form-control:focus {
-    color: #4E4B66;
-    background-color: #FCFCFC;
-    border-color: #14142B;
-    box-shadow: none;
+    color: #4E4B66 !important;
+    background-color: #FCFCFC !important;
+    border-color: #14142B !important;
+    box-shadow: none !important;
 }
 
 .form-control::placeholder{
@@ -504,6 +504,10 @@ table#guarantors{
 
 .search-group .form-control{
     padding-right: 20px;
+    background-color: #FAF8FA;
+    border: 1px solid #E5E5E5;
+    background-color: #E5E5E5;
+    border: 1px solid #CCC3D9;
 }
 
 .search-group .fa {
