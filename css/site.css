@@ -78,7 +78,7 @@ body{
 
 .btn-secondary, .btn-secondary:active {
     color: #24348B !important;
-    border: 2px solid #24348B !important;
+    border: 1px solid #24348B !important;
     background-color: #ffffff !important;
 }
 .btn-subtle, .btn-subtle:hover, .btn-subtle:active {
@@ -237,6 +237,7 @@ body{
     margin-left: 248px;
     transition: margin-left .5s;
     padding: 16px;
+    padding-top: 30px;
     padding-bottom: 50px;
 }
 
@@ -363,27 +364,27 @@ form .btn-secondary:active {
 
 /****STYLES FOR CUSTOM ALERT(S)*************************/
 
-#alertModal .closebtn {
+.alert .closebtn {
     position: absolute;
     top: 18px;
     direction: ltr;
     right: 18px;
     font-size: 30px;
 }
-#alertModal .modal-content {
+.alert .modal-content {
     border-radius: 8px;
 }
-#alertModal .modal-content .modal-body {
+.alert .modal-content .modal-body {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-#alertModal .modal-content .modal-body p {
+.alert .modal-content .modal-body p {
     width: 65%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
 }
-#alertModal .modal-content .modal-body .btn {
+.alert .modal-content .modal-body .btn {
     padding-right: 30px;
     padding-left: 30px;
 }
@@ -400,11 +401,11 @@ form .btn-secondary:active {
 
 @media (max-width:991px) {
     @media (max-width:424px) {
-        #alertModal .modal-content .modal-body p {
+        .alert .modal-content .modal-body p {
             width: 100%;
         }
 
-        #alertModal .closebtn {
+        .alert .closebtn {
             top: 15px;
             right: 15px;
         }
@@ -537,6 +538,103 @@ table#guarantors{
         margin-right: 0.5rem;
     }
 }
+
+
+/******************************INTEGRATIONS INDEX PAGE*********************************/
+.integration-page-sub-heading{
+    color:#6E7191;
+    margin-top: 3px;
+    font-size: 15px;
+}
+
+.integration-item.connected .card-body .unlink {
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    top:15px;
+    right: 20px;
+    width:36px;
+    height:36px;
+    border-radius: 50%;
+    background-color:#E4E9FF;
+    text-align: center;
+    color: #24348B;
+}
+
+.integration-item.connected .card-body .unlink .fa {
+    align-self: center;
+}
+
+.integration-item .card-body .brand-logo-container {
+    height: 82px;
+    max-height: 82px;
+    width: 82px;
+    max-width: 82px;
+    background-color: #F8F8FA;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.integration-item .card-body .brand-logo-container.collect-africa {
+    background-color: #3AB75D;
+    color: #FFFFFF
+}
+
+.integration-item .card-body .brand-description {
+    color:#6E7191;
+    font-size: 12px;
+}
+
+.integration-item .card-footer {
+    background-color: #FFFFFF;
+    border-top:none;
+    padding-bottom: 18px;
+    padding-top: 5px;
+}
+
+.integration-item .card-footer .btn{
+    padding-top:13px;
+    padding-bottom: 13px;
+    font-size: 16px !important;
+}
+
+.integration-item.connected .card-footer .btn {
+    background-color: #B8C1EF;
+    color: #24348B;
+}
+
+.integration-item.unconnected .card-footer .btn {
+    background-color: #24348B;
+    color: #FFFFFF;
+}
+
+#addDebitCardModel.alert .modal-content .modal-body {
+    padding: 40px 30px;
+}
+
+#addDebitCardModel.alert .modal-content .modal-body h5 {
+    color:#200E32;
+    margin-bottom: 13px !important;
+}
+
+.alert .modal-content .modal-body .btn {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+@media (min-width:331px) and (max-width:575px) {
+    .integration-item {
+        width:330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 
 
