@@ -423,14 +423,14 @@ form .btn-secondary:active {
     }
 
     @media (min-width: 401px) and (max-width: 575px) {
-        form {
+        form.trade-lender-form {
             width: 80%;
             margin-left: auto !important;
             margin-right: auto !important;
         }
 
          @media (max-width: 470px) {
-             form {
+             form.trade-lender-form {
                  width: 90%;
              }
          }
@@ -632,6 +632,27 @@ table#guarantors{
         width:330px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media (max-width: 580px) {
+    #addDebitCardModel .form-row .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    @media (min-width: 421px) and (max-width: 424px) {
+        #unlinkModal .modal-content .modal-body p {
+            flex: 0 0 85%;
+            max-width: 85%;
+        }
+    }
+}
+
+@media (min-width: 450px) {
+    #unlinkModal .modal-content .modal-body p {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 
