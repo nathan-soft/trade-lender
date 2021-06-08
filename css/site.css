@@ -657,7 +657,241 @@ table#guarantors{
 }
 
 
+/******************************PROFILE UPDATE PAGE*********************************/
 
+.accountSetup-navigation-container h4.page-title {
+    color: #181819;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.accountSetup-navigation-bar .nav{
+    position:relative;
+    width:650px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.accountSetup-navigation-bar .nav .nav-item .nav-link {
+    position: relative;
+    font-size: 14px;
+    color: #6E7191;
+
+}
+
+.accountSetup-navigation-bar .nav .nav-item.active .nav-link {
+    color: #24348B;
+}
+
+.accountSetup-navigation-bar .nav .line-through{
+    width: 74%;
+    height: 1px;
+    position: absolute;
+    top: -2px;
+    display: block;
+    left: 13.45%;
+    background-color: #878787;
+}
+
+.accountSetup-navigation-bar .nav .nav-item .icon-container {
+    position: absolute;
+    top: -10px;
+    right:45%;
+    z-index:40;
+    padding: 2px;
+    padding-left: 3px;
+    font-size: 12px;
+    height: 17px;
+    width:17px;
+    background-color: #ffffff;
+    border:1px solid #878787;
+    border-radius: 50%;
+}
+.accountSetup-navigation-bar .nav .nav-item.active icon-container {
+    border-color: #24348B;
+}
+
+.accountSetup-navigation-bar .nav .nav-item i.fa {
+    vertical-align: top;
+    color: #4F4F4F;
+}
+.accountSetup-navigation-bar .nav .nav-item.active i.fa {
+    color: #24348B;
+}
+
+.profile-update-forms .tab-item{
+    display:none;
+}
+
+.profile-update-forms .tab-item.active {
+    display: flex;
+}
+
+.profile-update-forms .form-control {
+    color: #4E4B66;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+
+
+@media (min-width: 401px) {
+    .profile-update-forms button.btn-primary {
+        width: 50% !important;
+    }
+}
+
+@media (max-width:699px) {
+    .accountSetup-navigation-bar .nav {
+        width: 500px;
+    }
+    .accountSetup-navigation-bar .nav .nav-item .nav-link {
+        font-size: 12px;
+    }
+    .accountSetup-navigation-bar .nav .line-through {
+        width: 69.5%;
+        left: 15.8%;
+    }
+}
+
+@media (max-width:521px) {
+    .accountSetup-navigation-bar .nav {
+        width: 400px;
+        justify-content: center;
+    }
+
+    .accountSetup-navigation-bar .nav .nav-item .nav-link {
+        font-size: 10px;
+    }
+
+    .accountSetup-navigation-bar .nav .line-through {
+        width: 59.5%;
+        left: 20.5%;
+    }
+}
+
+@media (max-width:420px) {
+    .accountSetup-navigation-bar .nav {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .accountSetup-navigation-bar .nav .nav-item{
+        text-align: center;
+    }
+
+    .accountSetup-navigation-bar .nav .nav-item .icon-container {
+        font-size: 10px;
+    }
+
+    .accountSetup-navigation-bar .nav .line-through {
+        width: 63.5%;
+        left: 18%;
+    }
+}
+
+/* .accountSetup-navigation-bar .nav .nav-item:not(.accountSetup-navigation-bar .nav .nav-item:first-of-type):after {
+    content: " ";
+    position: absolute;
+    top: 5px;
+    right:50%;
+    display: block;
+    height: 2px;
+    width:calc(132px + 50%);
+    background-color: #878787;
+} */
+
+/* .progressBarTitle {
+    position: relative;
+    bottom: 20px;
+    font-size: 14px
+}
+
+.progressBarHr {
+    position: relative;
+    bottom: 5px;
+} */
+
+
+/* nav.acccount-navbar {
+    width: 100%;
+    border-bottom: 1px solid #EDEBF9;
+}
+
+.acccount-navbar li {
+    display: inline-block;
+}
+
+.acccount-navbar li a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    color: #24348B;
+    padding: 18px 80px;
+    border-bottom: 2px solid #EDEBF9;
+    margin-bottom: -4px;
+}
+
+.acccount-navbar li a:hover {
+    border-bottom: 2px solid #24348B;
+} */
+
+
+
+/* .drag-area {
+    border: 2px dashed #fff;
+    height: 500px;
+    width: 700px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #fff;
+}
+
+.drag-area .icon {
+    font-size: 100px;
+    color: #fff;
+}
+
+.drag-area header {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.drag-area span {
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin: 10px 0 15px 0;
+}
+
+.drag-area button {
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #5256ad;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+} */
 
 
 
