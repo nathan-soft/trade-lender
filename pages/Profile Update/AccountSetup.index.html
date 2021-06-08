@@ -296,12 +296,15 @@
                             <label for="idNumber">ID number</label>
                             <input type="text" class="form-control" id="idNumber" name="idNumber">
                         </div>
-                        <div class="form-group d-none">
+                        <div class="form-group">
+                            <label for="cac7">CAC7</label>
                             <div class="drag-area">
-                                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                                <header>Drag & Drop to Upload File</header>
-                                <span>OR</span>
-                                <button>Browse File</button>
+                                <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                                <p>Drag your file here or <button type="button">browse</button></p>
+                                <p class="upload-format-wrapper">
+                                    File format JPEG, PNG
+                                    <span class="d-block">PDF Size 15mb max</span>
+                                </p>
                                 <input type="file" hidden>
                             </div>
                         </div>
