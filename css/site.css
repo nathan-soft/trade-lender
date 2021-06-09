@@ -301,7 +301,7 @@ main .go-back-group > i{
 }
 
 .table tbody td .btn {
-    color: #0566C4;
+    color: #0566C3;
     border: 1px solid #0566C4;
     border-radius: 3px !important;
     vertical-align: middle;
@@ -735,7 +735,7 @@ table#guarantors{
     margin-bottom: 25px;
 }
 
-p{
+.profile-picture-container .upload-profile-picture-box p {
     font-size: 18px;
     font-weight: 600;
     color:#130F26;
