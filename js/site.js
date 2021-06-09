@@ -16,6 +16,19 @@ function closeNav() {
     document.querySelector(".main").style.marginLeft = "0";
 }
 
+function goToAccountSetupTab(){
+    //hide the upload profile picture tab.
+    document.querySelector("#uploadProfilePictureTab").classList.add("d-none")
+    //shows the ACCOUNT SETUP TAB
+    document.querySelector("#accountSetupTab").classList.remove("d-none");
+    resetProfileUpdatePage();
+}
+
+function resetProfileUpdatePage() {
+    //adds background color to the main content.
+    document.querySelector("body").classList.add("bg-white")
+}
+
 function goToNextTab(){
     let tabContainer = document.querySelector(".tab-container");
     let currentTab = tabContainer.querySelector(".tab-item.active");

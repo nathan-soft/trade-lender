@@ -362,7 +362,60 @@ form .btn-secondary:active {
     background-color: #E5E5E5 !important;
 }
 
-/****STYLES FOR CUSTOM ALERT(S)*************************/
+/********************STYLES FOR CUSTOM UPLOAD*******************/
+.drag-area {
+    border: 2px dashed #B8C1EF;
+    height: 190px;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drag-area.active {
+    border: 2px solid #B8C1EF;
+}
+
+.drag-area .icon {
+    font-size: 40px;
+    color: #24348B;
+}
+
+.drag-area p {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    color: #595959;
+    margin-bottom: 7px;
+}
+
+.drag-area .upload-format-wrapper {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.drag-area button {
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #24348B;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.drag-area img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/*****************STYLES FOR CUSTOM ALERT(S)*************************/
 
 .alert .closebtn {
     position: absolute;
@@ -658,6 +711,42 @@ table#guarantors{
 
 
 /******************************PROFILE UPDATE PAGE*********************************/
+#uploadProfilePictureTab{
+    height: calc(90vh - 80px);
+}
+.brand-logo-top-container{
+    width:70px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-picture-container{
+    width:450px;
+    height:400px;
+}
+
+.profile-picture-container .upload-profile-picture-box {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    padding-top: 30px;
+    border-radius: 1px solid #FFFFFF;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 600;
+    color:#130F26;
+}
+
+.profile-picture-container button{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 .accountSetup-navigation-container h4.page-title {
     color: #181819;
@@ -770,6 +859,21 @@ table#guarantors{
 }
 
 @media (max-width:521px) {
+    #uploadProfilePictureTab {
+        height: calc(80vh - 80px);
+    }
+    
+    .profile-picture-container {
+        width: 400px;
+        height: 263px;
+    }
+
+    .profile-picture-container button {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .accountSetup-navigation-bar .nav {
         width: 400px;
         justify-content: center;
@@ -786,6 +890,19 @@ table#guarantors{
 }
 
 @media (max-width:420px) {
+    .profile-picture-container {
+        width: 100%;
+    }
+
+    .profile-picture-container .upload-profile-picture-box {
+        background-color: transparent;
+        padding: 0 0;
+    }
+
+    .profile-picture-container .upload-profile-picture-box .drag-area{
+        background-color: #FFFFFF;
+    }
+
     .accountSetup-navigation-bar .nav {
         width: 100%;
         flex-wrap: nowrap;
@@ -834,63 +951,6 @@ table#guarantors{
 
 
 
-.drag-area {
-    border: 1px dashed #B8C1EF;
-    height: 190px;
-    width: 100%;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.drag-area.active {
-    border: 2px solid #B8C1EF;
-}
-
-.drag-area .icon {
-    font-size: 40px;
-    color: #24348B;
-}
-
-/* .drag-area header {
-    font-size: 18px;
-    font-weight: 500;
-    color: #24348B;
-} */
-
-.drag-area p {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 500;
-    color: #595959;
-    margin-bottom: 7px;
-}
-
-.drag-area .upload-format-wrapper {
-    font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 15px;
-}
-
-.drag-area button {
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    background: #fff;
-    color: #24348B;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.drag-area img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
 
 
 
