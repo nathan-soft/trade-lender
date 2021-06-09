@@ -50,8 +50,8 @@
             </nav>
         </section>
         <section class="row mt-4">
-            <form class="profile-update-forms trade-lender-form col-12">
-                <div class="tab-item row justify-content-center">
+            <form class="profile-update-forms tab-container col-12">
+                <div id="personalDetails" class="tab-item active row justify-content-center">
                     <section class="col-md-4 col-sm-6">
                         <div class="form-group">
                             <label for="title">Title</label>
@@ -140,19 +140,20 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="relationalStatus">Relational Status</label>
-                            <select class="form-control" id="relationalStatus" name="relationalStatus">
+                            <label for="residentialStatus">Residential Status</label>
+                            <select class="form-control" id="residentialStatus" name="residentialStatus">
                                 <option value=""></option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="maritalStatus">Marital Status</label>
                             <select class="form-control" id="maritalStatus" name="maritalStatus">
                                 <option value=""></option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="Divorced">Divorced</option>
+                                <option value="Married">Married</option>
+                                <option value="Single">Single</option>
+                                <option value="Widow">Widow</option>
+                                <option value="Widower">Widower</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -167,23 +168,23 @@
                             <label for="gender">Educational Level</label>
                             <select class="form-control" id="gender" name="gender">
                                 <option value=""></option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
                             </select>
                         </div>
                     </section>
                     <section class="col-12 col-md-8 action text-center mt-4">
-                        <button type="submit" class="btn w-100 btn-primary ml-1">Continue</button>
+                        <button type="button" class="btn w-100 btn-primary" onclick="goToNextTab()">Continue</button>
                     </section>
                 </div>
-                <div class="tab-item row justify-content-center active">
+                <div id="businessDetails" class="tab-item row justify-content-center">
                     <section class="col-md-4 col-sm-6">
                         <div class="form-group">
                             <label for="typeOfBusiness">Type of business</label>
                             <select class="form-control" id="typeOfBusiness" name="typeOfBusiness">
                                 <option value=""></option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="Unspecified">Unspecified</option>
+                                <option value="Sole Propritorship">Sole Propritorship</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Limited Liability Company">Limited Liability Company</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -191,11 +192,11 @@
                             <input type="text" class="form-control" id="nameOfBusiness" name="nameOfBusiness">
                         </div>
                         <div class="form-group">
-                            <label for="businessRegistered">Is the business registered</label>
-                            <select class="form-control" id="businessRegistered" name="businessRegistered">
+                            <label for="businessRegistered2">Is the business registered</label>
+                            <select class="form-control" id="businessRegistered2" name="businessRegistered2">
                                 <option value=""></option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -239,7 +240,9 @@
                         <div class="form-group">
                             <label for="ownedOrRented">Is your business owned or rented?</label>
                             <select class="form-control" name="ownedOrRented" id="ownedOrRented">
-                                <option></option>
+                                <option value=""></option>
+                                <option value="Owned">Owned</option>
+                                <option value="Rented">Rented</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -253,13 +256,39 @@
                         <div class="form-group">
                             <label for="howDoYouSell">How do you sell?</label>
                             <select class="form-control" name="howDoYouSell" id="howDoYouSell">
-                                <option></option>
+                                <option value=""></option>
+                                <option value="I sell online (jumia, konga etc)">I sell online (jumia, konga etc)</option>
+                                <option value="I distribute FMCG goods">I distribute FMCG goods</option>
+                                <option value="I buy and sell agro-commodities">I buy and sell agro-commodities</option>
+                                <option value="I have a physical shop">I have a physical shop</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="industry">Which industry does your business belong to?</label>
                             <select class="form-control" name="industry" id="industry">
-                                <option></option>
+                                <option value=""></option>
+                                <option value="Agriculture">Agriculture</option>
+                                <option value="Autos">Autos</option>
+                                <option value="Beauty Products">Beauty Products</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Food & Beverages">Food & Beverages</option>
+                                <option value="Furniture & Fittings">Furniture & Fittings</option>
+                                <option value="Health & Pharma Products">Health & Pharma Products</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Household Appliances">Household Appliances</option>
+                                <option value="Industrialgoods">Industrialgoods</option>
+                                <option value="Office Supplies">Office Supplies</option>
+                                <option value="Packaging and Plastic">Packaging and Plastic</option>
+                                <option value="Personal Care">Personal Care</option>
+                                <option value="Consulting Services">Consulting Services</option>
+                                <option value="Education">Education</option>
+                                <option value="Home Services">Home Services</option>
+                                <option value="Logistics">Logistics</option>
+                                <option value="Media and Entertainments">Media and Entertainments</option>
+                                <option value="Professional Services">Professional Services</option>
+                                <option value="Tecnology Services">Tecnology Services</option>
+                                <option value="Utility Services">Utility Services</option>
+                                <option value="Agency Banking">Agency Banking</option>
                             </select>
                         </div>
                     </section>
@@ -267,19 +296,36 @@
                         <div class="form-group">
                             <label for="monthlySales">Average monthly sales</label>
                             <select class="form-control" name="monthlySales" id="monthlySales">
-                                <option></option>
+                                <option value=""></option>
+                                <option value="0-1M">0-1M</option>
+                                <option value="1-5M">1-5M</option>
+                                <option value="6-10M">6-10M</option>
+                                <option value="11-20M">11-20M</option>
+                                <option value="21-40M">21-40M</option>
+                                <option value=">40M">>40M</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="monthlyExpenses">Average monthly expenses</label>
                             <select class="form-control" name="monthlyExpenses" id="monthlyExpenses">
-                                <option></option>
+                                <option value=""></option>
+                                <option value="0-1M">0-1M</option>
+                                <option value="1-5M">1-5M</option>
+                                <option value="6-10M">6-10M</option>
+                                <option value="11-20M">11-20M</option>
+                                <option value="21-40M">21-40M</option>
+                                <option value=">40M">>40M</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="businessDuration">How long have you been in business?</label>
                             <select class="form-control" name="businessDuration" id="businessDuration">
-                                <option></option>
+                                <option vlaue=""></option>
+                                <option value="0-1">0 -1</option>
+                                <option value="1-3">1-3</option>
+                                <option value="3-5">3-5</option>
+                                <option value="5-10">5-10</option>
+                                <option value="10+">10+</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -287,9 +333,13 @@
                             <input type="text" class="form-control" id="tin" name="tin">
                         </div>
                         <div class="form-group">
-                            <label for="identificationType">Identification type</label>
-                            <select class="form-control" name="identificationType" id="identificationType">
-                                <option></option>
+                            <label for="identificationType2">Identification type</label>
+                            <select class="form-control" name="identificationType2" id="identificationType2">
+                                <option value=""></option>
+                                <option value="International Passport">International Passport</option>
+                                <option value="Driver's License">Driver's License</option>
+                                <option value="NIN">NIN</option>
+                                <option value="Voter's Card">Voter's Card</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -305,12 +355,83 @@
                                     File format JPEG, PNG
                                     <span class="d-block">PDF Size 15mb max</span>
                                 </p>
-                                <input type="file" hidden>
+                                <input type="file" id="cac7FileUpload" name="cac7FileUpload" hidden>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cac2">CAC2</label>
+                            <div class="drag-area">
+                                <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                                <p>Drag your file here or <button type="button">browse</button></p>
+                                <p class="upload-format-wrapper">
+                                    File format JPEG, PNG
+                                    <span class="d-block">PDF Size 15mb max</span>
+                                </p>
+                                <input type="file" id="cac2FileUpload" name="cac2FileUpload" hidden>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cacCertificate">CAC certificate</label>
+                            <div class="drag-area">
+                                <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                                <p>Drag your file here or <button type="button">browse</button></p>
+                                <p class="upload-format-wrapper">
+                                    File format JPEG, PNG
+                                    <span class="d-block">PDF Size 15mb max</span>
+                                </p>
+                                <input type="file" id="cacCertificateFileUpload" name="cacCertificateFileUpload" hidden>
                             </div>
                         </div>
                     </section>
                     <section class="col-12 col-md-8 action text-center mt-4">
-                        <button type="submit" class="btn w-100 btn-primary ml-1">Continue</button>
+                        <button type="button" class="btn w-100 btn-primary" onclick="goToNextTab()">Continue</button>
+                    </section>
+                </div>
+                <div id="financialDetails" class="tab-item row flex-column align-content-center">
+                    <section class="col-md-4 col-sm-7">
+                        <div class="form-group">
+                            <label for="bankName">Bank name</label>
+                            <input type="text" class="form-control" id="bankName" name="bankName">
+                        </div>
+                        <div class="form-group">
+                            <label for="accountName">Bank account name</label>
+                            <input type="text" class="form-control" id="accountName" name="accountName">
+                        </div>
+                        <div class="form-group">
+                            <label for="accountNumber">Bank account number</label>
+                            <input type="text" class="form-control" id="accountNumber" name="accountNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="hasOnlineBanking">Has online banking?</label>
+                            <select class="form-control" name="hasOnlineBanking" id="hasOnlineBanking">
+                                <option value=""></option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastLoanPeriod">Have you taken out a loan in the past 12 months?</label>
+                            <input type="text" class="form-control" id="lastLoanPeriod" name="lastLoanPeriod">
+                        </div>
+                        <div class="form-group">
+                            <label for="idNumber">If yes, how much?</label>
+                            <input type="text" class="form-control" id="idNumber" name="idNumber">
+                        </div>
+                        <div class="form-group">
+                            <label for="cacCertificate">Upload bank statement</label>
+                            <div class="drag-area">
+                                <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                                <p>Drag your file here or <button type="button">browse</button></p>
+                                <p class="upload-format-wrapper">
+                                    File format JPEG, PNG
+                                    <span class="d-block">PDF Size 15mb max</span>
+                                </p>
+                                <input type="file" id="bankStatementFileUpload" name="bankStatementFileUpload" hidden>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-12 col-md-4 col-sm-7 action text-center mt-4">
+                        <button type="button" class="btn w-100 btn-primary">Continue</button>
                     </section>
                 </div>
             </form>

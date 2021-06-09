@@ -736,13 +736,27 @@ table#guarantors{
 
 
 
-@media (min-width: 401px) {
-    .profile-update-forms button.btn-primary {
+@media (min-width: 576px) {
+    .profile-update-forms button.btn-primary:not(.profile-update-forms #financialDetails button.btn-primary) {
         width: 50% !important;
     }
 }
 
 @media (max-width:699px) {
+    @media (min-width: 401px) and (max-width: 575px) {
+        .profile-update-forms .tab-item {
+            width: 80%;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        @media (max-width: 470px) {
+            .profile-update-forms .tab-item {
+                width: 90%;
+            }
+        }
+    }
+
     .accountSetup-navigation-bar .nav {
         width: 500px;
     }
@@ -793,27 +807,6 @@ table#guarantors{
     }
 }
 
-/* .accountSetup-navigation-bar .nav .nav-item:not(.accountSetup-navigation-bar .nav .nav-item:first-of-type):after {
-    content: " ";
-    position: absolute;
-    top: 5px;
-    right:50%;
-    display: block;
-    height: 2px;
-    width:calc(132px + 50%);
-    background-color: #878787;
-} */
-
-/* .progressBarTitle {
-    position: relative;
-    bottom: 20px;
-    font-size: 14px
-}
-
-.progressBarHr {
-    position: relative;
-    bottom: 5px;
-} */
 
 
 /* nav.acccount-navbar {

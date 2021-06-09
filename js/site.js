@@ -16,49 +16,82 @@ function closeNav() {
     document.querySelector(".main").style.marginLeft = "0";
 }
 
+function goToNextTab(){
+    let tabContainer = document.querySelector(".tab-container");
+    let currentTab = tabContainer.querySelector(".tab-item.active");
+    let navContainer = document.querySelector(".accountSetup-navigation-bar");
+    //make next tab active
+    let nextTab = currentTab.nextElementSibling;
+    if(nextTab != null){
+        nextTab.classList.add("active");
+        //remove the current tab from being active
+        currentTab.classList.remove("active");
+
+        //remove the active nav menu
+        navContainer.querySelector(".nav-item.active").classList.remove("active");
+        if (nextTab.id == "businessDetails"){
+            //set new active menu
+            navContainer.querySelector(".nav-item:nth-of-type(2)").classList.add("active");
+        }else{
+            //set new active menu
+            navContainer.querySelector(".nav-item:last-of-type").classList.add("active");
+        }
+    }
+    
+}
+
 
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// UPLOAD SESCTION START ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-//selecting all required elements
-const dropArea = document.querySelector(".drag-area"),
-    dragText = dropArea.querySelector("p:first-of-type"),
-    button = dropArea.querySelector("button"),
-    input = dropArea.querySelector("input");
+
 let file; //this is a global variable and we'll use it inside multiple functions
 
-button.onclick = () => {
-    input.click(); //if user click on the button then the input also clicked
-}
+ document.querySelectorAll(".drag-area").forEach(element =>{
+     //selecting all required elements
+    let dropArea = element;
+    let dragText = dropArea.querySelector("p:first-of-type");
+    let button = dropArea.querySelector("button");
+    let input = dropArea.querySelector("input");
 
-input.addEventListener("change", function () {
-    //getting user select file and [0] this means if user select multiple files then we'll select only the first one
-    file = this.files[0];
-    dropArea.classList.add("active");
-    showFile(); //calling function
-});
+    //If user Drag File Over DropArea
+    element.addEventListener("dragover", (event) => {
+        event.preventDefault(); //preventing from default behaviour
+        element.classList.add("active");
+        dragText.textContent = "Release to Upload File";
+    });
 
-//If user Drag File Over DropArea
-dropArea.addEventListener("dragover", (event) => {
-    event.preventDefault(); //preventing from default behaviour
-    dropArea.classList.add("active");
-    dragText.textContent = "Release to Upload File";
-});
-//If user leave dragged File from DropArea
-dropArea.addEventListener("dragleave", () => {
-    dropArea.classList.remove("active");
-    dragText.textContent = "Drag & Drop to Upload File";
-});
-//If user drop File on DropArea
-dropArea.addEventListener("drop", (event) => {
-    event.preventDefault(); //preventing from default behaviour
-    //getting user select file and [0] this means if user select multiple files then we'll select only the first one
-    file = event.dataTransfer.files[0];
-    showFile(); //calling function
-});
+    //If user leave dragged File from DropArea
+    element.addEventListener("dragleave", () => {
+        element.classList.remove("active");
+        dragText.innerHTML = 'Drag your file here or <button type="button">browse</button>';
+    });
 
-function showFile() {
+    //If user drop File on DropArea
+    element.addEventListener("drop", (event) => {
+        event.preventDefault(); //preventing from default behaviour
+        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+        file = event.dataTransfer.files[0];
+        showFile(dropArea, dragText); //calling function
+    });
+
+    button.onclick = () => {
+        input.click(); //if user click on the button then the input also clicked
+    }
+
+    input.addEventListener("change", function () {
+        //getting user select file and [0] this means if user select multiple files then we'll select only the first one
+        file = this.files[0];
+        dropArea.classList.add("active");
+        showFile(dropArea, dragText); //calling function
+    });
+ });
+
+
+
+
+function showFile(dropArea, dragText) {
     let fileType = file.type; //getting selected file type
     //adding some valid image extensions in array
     let validExtensions = ["image/jpeg", "image/jpg", "image/png", "application/pdf"]; 
