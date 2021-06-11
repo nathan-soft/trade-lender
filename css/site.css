@@ -323,7 +323,7 @@ main .go-back-group > i{
     border: 1px solid #24348B;
     color:#24348B;
     padding-left: 13px;
-    background-color: #E5E5E5;
+    background-color: transparent;
     padding-right: 13px;
     border-radius: 3px;
 }
