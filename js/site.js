@@ -81,10 +81,18 @@ function goToNextTab(e) {
     document.querySelector(`#${activeAnchorTag.href.split("#")[1]}`).classList.add("d-none");
     //make the clicked menu/anchor tag the active one.
     anchorParent.classList.add("active");
+    //set the value of the drop-down in the navigation menu to match the href of the clicke link.
+    setDropDownNavigationValue(`${tabId}`);
+    document.querySelector(".loan-grid-navigation-bar .dropdown-nav select").selec
     //make the tab whose id matches the clicked anchor element "href" attribute, active.
     document.querySelector(`#${tabId}`).classList.remove("d-none");
     
 
+}
+
+function setDropDownNavigationValue(valueToSelect) {
+    let element = document.querySelector(".loan-grid-navigation-bar .dropdown-nav select");
+    element.value = valueToSelect;
 }
 
 
