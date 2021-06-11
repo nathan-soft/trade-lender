@@ -28,11 +28,11 @@
                         <i class="fa fa-pie-chart pr-1"></i> Dashboard
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-signal pr-1"></i> Loans</a>
-                </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="./index.html"><i class="fa fa-users pr-1"></i> Guarantors</a>
+                    <a class="nav-link" href="./index.html"><i class="fa fa-signal pr-1"></i> Loans</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Guarantors/index.html"><i class="fa fa-users pr-1"></i> Guarantors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../Notification/index.html">
@@ -67,102 +67,362 @@
             </h4>
             <div class="actions d-flex flex-wrap ml-auto">
                 <a href="create.html" class="btn btn-primary">
-                    Add New Guarantor
+                    New Loan Request
                 </a>
             </div>
         </section>
 
-        <section class="row mt-3">
-            <div class="col-md-4 col-sm-6 search-group">
-                <input class="form-control py-2" type="search" placeholder="search" id="search">
-                <span class="fa fa-search"></span>
-            </div>
+        <section class="loan-grid-container mt-3">
+            <nav class="loan-grid-navigation-bar">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="#allLoanApplications" class="nav-link">
+                            Loan Applications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#activeLoans" class="nav-link">
+                            Active Loans
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#unpaidLoans" class="nav-link">
+                            Unpaid Loans
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#paidLoans" class="nav-link">
+                            Paid Loans
+                        </a>
+                    </li>
+                </ul>
+                <div class="dropdown-nav">
+                    <select class="form-control">
+                        <option value="allLoanApplications">Loan Applications</option>
+                        <option value="activeLoans">Active Loans</option>
+                        <option value="unpaidLoans">Unpaid Loans</option>
+                        <option value="paidLoans">Paid Loans</option>
+                    </select>
+                </div>
+                <div class="search-group">
+                    <input class="form-control py-2" type="search" placeholder="search" id="search">
+                    <span class="fa fa-search"></span>
+                </div>
+            </nav>
+
+           
+
+
+            <!-- GRID SECTION -->
+            <section class="table-responsive-lg mt-3 loan-applicathgions table-wrapper">
+                <div id="allLoanApplications">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>REASON</th>
+                                <th>AMOUNT</th>
+                                <th>LOAN TENOR</th>
+                                <th>INTEREST(%)</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-primary">Marketing</td>
+                                <td>₦50,000,000,000.00</td>
+                                <td>90 days</td>
+                                <td>15%</td>
+                                <td class="text-info">Pending</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a bill</td>
+                                <td>₦250,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-info">Pending</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a supplier</td>
+                                <td>₦1,000,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-info">Pending</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-info">Pending</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Expand my business</td>
+                                <td>₦5,000,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-danger">Declined</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-danger">Declined</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-danger">Declined</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="activeLoans" class="d-none">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>REASON</th>
+                                <th>AMOUNT</th>
+                                <th>LOAN TENOR</th>
+                                <th>INTEREST(%)</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-primary">Marketing</td>
+                                <td>₦50,000,000,000.00</td>
+                                <td>90 days</td>
+                                <td>15%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a bill</td>
+                                <td>₦250,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a supplier</td>
+                                <td>₦1,000,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Expand my business</td>
+                                <td>₦5,000,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Active</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="unpaidLoans" class="d-none">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>REASON</th>
+                                <th>AMOUNT</th>
+                                <th>LOAN TENOR</th>
+                                <th>INTEREST(%)</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-primary">Marketing</td>
+                                <td>₦50,000,000,000.00</td>
+                                <td>90 days</td>
+                                <td>15%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a bill</td>
+                                <td>₦250,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a supplier</td>
+                                <td>₦1,000,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Expand my business</td>
+                                <td>₦5,000,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-error">Unpaid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="paidLoans" class="d-none">
+                    <table class="table">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>REASON</th>
+                                <th>AMOUNT</th>
+                                <th>LOAN TENOR</th>
+                                <th>INTEREST(%)</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-primary">Marketing</td>
+                                <td>₦50,000,000,000.00</td>
+                                <td>90 days</td>
+                                <td>15%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a bill</td>
+                                <td>₦250,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay a supplier</td>
+                                <td>₦1,000,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Expand my business</td>
+                                <td>₦5,000,000.00</td>
+                                <td>30 days</td>
+                                <td>5%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                            <tr>
+                                <td class="text-primary">Pay salary</td>
+                                <td>₦450,000.00</td>
+                                <td>60 days</td>
+                                <td>10%</td>
+                                <td class="text-success">Paid</td>
+                                <td><button class="btn btn-sm">View More</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </section>
+            
+            <!-- PAGINATION SECTION -->
+            <section>
+                <ul class="pagination justify-content-end">
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </section>
+            
         </section>
 
-        <!-- GRID SECTION -->
-        <section class="table-responsive-lg mt-3 loan-applications">
-            <table class="table">
-                <thead class="thead-light">
-                    <tr>
-                        <th>REASON</th>
-                        <th>AMOUNT</th>
-                        <th>LOAN TENOR</th>
-                        <th>INTEREST(%)</th>
-                        <th>STATUS</th>
-                        <th>ACTION</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white">
-                    <tr>
-                        <td class="text-primary">Marketing</td>
-                        <td>₦50,000,000,000.00</td>
-                        <td>90 days</td>
-                        <td>15%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay a bill</td>
-                        <td>₦250,000.00</td>
-                        <td>30 days</td>
-                        <td>5%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay a supplier</td>
-                        <td>₦1,000,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay salary</td>
-                        <td>₦450,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-info">Pending</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Expand my business</td>
-                        <td>₦5,000,000.00</td>
-                        <td>30 days</td>
-                        <td>5%</td>
-                        <td class="text-danger">Declined</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay salary</td>
-                        <td>₦450,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-danger">Declined</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                    <tr>
-                        <td class="text-primary">Pay salary</td>
-                        <td>₦450,000.00</td>
-                        <td>60 days</td>
-                        <td>10%</td>
-                        <td class="text-danger">Declined</td>
-                        <td><button class="btn btn-sm">View More</button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- PAGINATION SECTION -->
-        <section>
-            <ul class="pagination justify-content-end">
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </section>
+        
 
         <!-- The Modal -->
         <div class="modal fade alert" id="alertModal">

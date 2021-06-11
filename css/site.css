@@ -56,6 +56,10 @@ body{
     color:#C6B417 !important;
 }
 
+.text-error {
+    color: #ED2E7E !important;
+}
+
 .text-danger {
     color: #F40B0B !important;
 }
@@ -926,32 +930,130 @@ table#guarantors{
 
 
 
-/* nav.acccount-navbar {
-    width: 100%;
-    border-bottom: 1px solid #EDEBF9;
+/************************************* LOAN PAGE ****************************************/
+
+.loan-grid-container{
+    background-color: #FFFFFF;
+    border: 1px solid #EDEBF9;
+    border-radius: 8px;
+    padding: 20px 25px 35px;
 }
 
-.acccount-navbar li {
-    display: inline-block;
+.loan-grid-container .loan-grid-navigation-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 50px;
+}
+.loan-grid-container .loan-grid-navigation-bar::after {
+    content: "";
+    position: absolute;
+    background-color:#EDEBF9;
+    height: 2px;
+    width: 85%;
+    top: 100%;
+    left:3%;
 }
 
-.acccount-navbar li a {
-    display: block;
-    text-decoration: none;
-    font-size: 16px;
+.loan-grid-container .loan-grid-navigation-bar .nav {
+    align-self:center
+}
+
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item:first-of-type a {
+    padding-left: 0;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item a {
+    position: relative;
+    font-size: 14px;
+    color: #94979B;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item.active a,
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item a:hover
+{
     color: #24348B;
-    padding: 18px 80px;
-    border-bottom: 2px solid #EDEBF9;
-    margin-bottom: -4px;
 }
 
-.acccount-navbar li a:hover {
-    border-bottom: 2px solid #24348B;
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item.active a::before,
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item a:hover:before {
+    content: "";
+    position: absolute;
+    background-color: #24348B;
+    height: 2px;
+    width: calc(92% - 32px);
+    bottom: -8px;
+    z-index: 30;
+    left: 18%;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item:first-of-type a::before {
+    width: calc(87% - 32px);
+    /* left: 21%; */
+}
+
+.loan-grid-container .loan-grid-navigation-bar .nav .nav-item:last-of-type a::before {
+    /* width: calc(92% - 32px); */
+    left: 21%;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .dropdown-nav {
+    display: none;
+    width:200px;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .dropdown-nav .form-control{
+     background: #FFFFFF;
+     color:#14142B;
+     border: 1px solid #EDEBF9;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .search-group {
+    position: relative;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .search-group .fa {
+    right: 13px;
+}
+
+.loan-grid-container .loan-grid-navigation-bar .search-group .form-control,
+.loan-grid-container .loan-grid-navigation-bar .dropdowhn-nav .form-control {
+    background-color: #FAF8FA;
+    border: 1px solid #E5E5E5;
+    color:#181819;
+}
+
+.loan-grid-container table{
+    margin-bottom: 1.5rem;
+}
+
+.loan-grid-container table tr:last-of-type td {
+    border-bottom: 2px solid #dee2e6;
+    border-radius: 4px;
+}
+
+
+@media (min-width: 992px) and (max-width:1020px) {
+    .loan-grid-container .loan-grid-navigation-bar .nav .nav-item a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+    .loan-grid-container .loan-grid-navigation-bar::after {
+        content: none;
+    }
+
+    .loan-grid-container .loan-grid-navigation-bar .nav {
+        display: none;
+    }
+
+    .loan-grid-container .loan-grid-navigation-bar .dropdown-nav {
+        display: block;
+    }
+}
+
+/* @media (max-width: 575px) {
+    /*Maybe show few table columns
 } */
-
-
-
-
-
-
-

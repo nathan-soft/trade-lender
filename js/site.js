@@ -16,6 +16,11 @@ function closeNav() {
     document.querySelector(".main").style.marginLeft = "0";
 }
 
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////// PROFILE UPDATE SESCTION START ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
 function goToAccountSetupTab(){
     //hide the upload profile picture tab.
     document.querySelector("#uploadProfilePictureTab").classList.add("d-none")
@@ -26,32 +31,63 @@ function goToAccountSetupTab(){
 
 function resetProfileUpdatePage() {
     //adds background color to the main content.
-    document.querySelector("body").classList.add("bg-white")
+    document.querySelector("body").classList.add("bg-white");
 }
 
-function goToNextTab(){
+function goToNextTab() {
     let tabContainer = document.querySelector(".tab-container");
     let currentTab = tabContainer.querySelector(".tab-item.active");
     let navContainer = document.querySelector(".accountSetup-navigation-bar");
     //make next tab active
     let nextTab = currentTab.nextElementSibling;
-    if(nextTab != null){
+    if (nextTab != null) {
         nextTab.classList.add("active");
         //remove the current tab from being active
         currentTab.classList.remove("active");
 
         //remove the active nav menu
         navContainer.querySelector(".nav-item.active").classList.remove("active");
-        if (nextTab.id == "businessDetails"){
+        if (nextTab.id == "businessDetails") {
             //set new active menu
             navContainer.querySelector(".nav-item:nth-of-type(2)").classList.add("active");
-        }else{
+        } else {
             //set new active menu
             navContainer.querySelector(".nav-item:last-of-type").classList.add("active");
         }
     }
-    
+
 }
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////// LOAN PAGE START ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+document.querySelectorAll(".loan-grid-navigation-bar .nav-link").forEach(element =>{
+    element.addEventListener("click", goToNextTab);
+});
+
+function goToNextTab(e) {
+    //prevent default anchor element behaviour.
+    e.preventDefault();
+    let anchorParent = e.target.parentElement;
+    //get current active anchor tag parent and make unactive.
+    let currentActiveAnchorParent = anchorParent.parentElement.querySelector(".nav-item.active");
+    currentActiveAnchorParent.classList.remove("active");
+    //get current active anchor tag
+    let activeAnchorTag = currentActiveAnchorParent.querySelector(".nav-link");
+    //get the id of the tab to navigate to.
+    let tabId = e.target.href.split("#")[1];
+    //hide the active tab.
+    document.querySelector(`#${activeAnchorTag.href.split("#")[1]}`).classList.add("d-none");
+    //make the clicked menu/anchor tag the active one.
+    anchorParent.classList.add("active");
+    //make the tab whose id matches the clicked anchor element "href" attribute, active.
+    document.querySelector(`#${tabId}`).classList.remove("d-none");
+    
+
+}
+
+
 
 
 
