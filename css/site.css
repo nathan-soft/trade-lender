@@ -44,6 +44,10 @@ body{
     color: #24348B !important;
 }
 
+.text-primary-dark {
+    color: #0566C3 !important;
+}
+
 .text-secondary {
     color: #010C4D !important;
 }
@@ -54,6 +58,10 @@ body{
 
 .text-info{
     color:#C6B417 !important;
+}
+
+.text-warning {
+    color: #F4B740 !important;
 }
 
 .text-error {
@@ -930,7 +938,7 @@ table#guarantors{
 
 
 
-/************************************* LOAN PAGE ****************************************/
+/************************************* LOAN INDEX PAGE ****************************************/
 
 .loan-grid-container{
     background-color: #FFFFFF;
@@ -1024,6 +1032,18 @@ table#guarantors{
     color:#181819;
 }
 
+.small-screen-search-box.search-group {
+    display: none;
+    position: relative;
+    margin-top: 22px;
+}
+
+.small-screen-search-box.search-group .form-control {
+    background-color: #FAF8FA;
+    border: 1px solid #E5E5E5;
+    color: #A0A3BD;
+}
+
 .loan-grid-container table{
     margin-bottom: 1.5rem;
 }
@@ -1054,6 +1074,173 @@ table#guarantors{
     }
 }
 
-/* @media (max-width: 575px) {
-    /*Maybe show few table columns
-} */
+@media (max-width: 675px) {
+    .loan-grid-container table tr th:nth-child(3),
+    .loan-grid-container table tr th:nth-child(4),
+    .loan-grid-container table tr th:nth-child(5),
+    .loan-grid-container table tr td:nth-child(3),
+    .loan-grid-container table tr td:nth-child(4),
+    .loan-grid-container table tr td:nth-child(5){
+        display: none;
+    }
+}
+
+@media (max-width: 524px) {
+    @media (max-width: 520px) {
+        .loan-title-bar.page-title-bar {
+            flex-direction: row !important;
+            margin-bottom: 0 !important;
+        }
+        .loan-title-bar.page-title-bar .actions {
+            margin-top: 0 !important;
+        }
+    }
+
+    .loan-grid-container table tr th:nth-child(2),
+    .loan-grid-container table tr td:nth-child(2) {
+        display: none;
+    }
+
+    .loan-grid-navigation-bar .search-group{
+        display: none;
+    }
+
+    .small-screen-search-box.search-group{
+        display:block;
+    }
+
+    .loan-grid-container .loan-grid-navigation-bar .dropdown-nav {
+        width: 70%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .loan-grid-container{
+        border-radius: 0;
+        margin-left: -16px;
+        margin-right: -16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .loan-grid-container .loan-grid-navigation-bar .dropdown-nav {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 370px) {
+    .loan-grid-container .loan-grid-navigation-bar .dropdown-nav {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+/************************************* LOAN VIEW PAGE ****************************************/
+
+
+#loanView .card {
+    color: #130F26;
+    margin-bottom: .5rem;
+}
+
+#loanView .card .card-title {
+    font-size: 13.5px;
+}
+
+#loanView .card ul li::marker {
+    color: #130f26d3;
+}
+
+#loanView .view-offer-letter-container {
+    display: none;
+    margin-top:3.7rem;
+}
+
+#loanView .view-offer-letter-container .btn-secondary {
+    background-color: #FCFCFC !important;
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    #loanView .col-sm-6 {
+        flex: 0 0 calc(50% - 0.25rem);
+        max-width: calc(50% - 0.25rem);
+    }
+
+    #loanView>.col-sm-6:first-of-type {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 520px){
+    .loan-view-title-bar.page-title-bar {
+        margin-bottom: 0 !important;
+    }
+} 
+
+/************************************* LOAN CREATE PAGE ****************************************/
+form#createLoan .loan-eligibility-block,
+form#createLoan .loan-eligibility-block-small-screen {
+    background-color: #FFFFFF;
+    height: 230px;
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+
+form#createLoan .loan-eligibility-block-small-screen{
+    display: none;
+}
+
+form#createLoan .loan-eligibility-block .icon-block,
+form#createLoan .loan-eligibility-block-small-screen .icon-block {
+    margin-top: 1.3rem;
+}
+
+form#createLoan .loan-eligibility-block h6,
+form#createLoan .loan-eligibility-block-small-screen h6 {
+    font-size: 18px;
+}
+
+form#createLoan .loan-eligibility-block .text-wrapper,
+form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
+    color: #6E7191;
+    font-size: 13px;
+    margin-top: 1.3rem;
+}
+
+@media (max-width: 575px){
+    form#createLoan.trade-lender-form {
+        width: 90%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    form#createLoan .loan-eligibility-block{
+        display: none;
+    }
+
+    form#createLoan .loan-eligibility-block-small-screen {
+        display: flex;
+        margin: 2.6rem 15px 0 15px;
+    }
+} 
+
+@media (max-width: 400px) {
+    form#createLoan.trade-lender-form {
+        width: initial;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+}
+
+pre {
+    white-space: pre-line;
+}

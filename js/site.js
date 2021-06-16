@@ -59,12 +59,24 @@ function goToNextTab() {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-///////////////////////////// LOAN PAGE START ///////////////////////////
+///////////////////////////// LOAN INDEX PAGE START ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
 document.querySelectorAll(".loan-grid-navigation-bar .nav-link").forEach(element =>{
     element.addEventListener("click", goToNextTab);
 });
+
+//add change event listener to dropdown.
+let dropdown = document.querySelector(".loan-grid-navigation-bar .dropdown-nav select");
+if (dropdown != null) {
+    dropdown.addEventListener("change", (e) => {
+            //get the selected value.
+            let selectedValue = e.target.value;
+            //get the anchor tag with href matching the selected value
+            //and call it's clcik event.
+            document.querySelector(`.loan-grid-navigation-bar .nav-item a[href="#${selectedValue}"]`).click();
+    });
+}
 
 function goToNextTab(e) {
     //prevent default anchor element behaviour.
@@ -86,7 +98,6 @@ function goToNextTab(e) {
     document.querySelector(".loan-grid-navigation-bar .dropdown-nav select").selec
     //make the tab whose id matches the clicked anchor element "href" attribute, active.
     document.querySelector(`#${tabId}`).classList.remove("d-none");
-    
 
 }
 
@@ -95,8 +106,57 @@ function setDropDownNavigationValue(valueToSelect) {
     element.value = valueToSelect;
 }
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////// LOAN VIEW PAGE START ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+//get the loan view container.
+let loanViewContainer = document.querySelector("#loanView");
+if (loanViewContainer != null) {
+    //get the status text.
+    let loanStatus = loanViewContainer.querySelector(".loan-status-container .card-text").textContent;
+    if(loanStatus == "Approved"){
+        //show "View offer letter" button
+        loanViewContainer.querySelector(".view-offer-letter-container").style.display = "block"
+    }
+}
 
 
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////// CREATE LOAN PAGE START ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+//get the "create new loan" form.
+let loanForm = document.querySelector("form#createLoan");
+if (loanForm != null) {
+    //get "what do you need it for dropdown" and attach a change event listener
+    loanForm.querySelector("select#loanFor").addEventListener("change", (e) => {
+        //get the selected value.
+        let selectedValue = e.target.value;
+        if (selectedValue == "Working Capitals") {
+            hideNonEssentialControls();
+            //show the loan description block
+            loanForm.querySelector(".loan-desc-container").classList.remove("d-none");
+        } else if (selectedValue == "LPO") {
+            hideNonEssentialControls();
+            //show the "Upload LPO block"
+            loanForm.querySelector(".lpo-container").classList.remove("d-none");
+            //show the "Upload Proforma Invoice" block
+            loanForm.querySelector(".proforma-container").classList.remove("d-none");
+        } else {
+            hideNonEssentialControls();
+        }
+    });
+}
+
+function hideNonEssentialControls(){
+    //hide the loan description block
+    loanForm.querySelector(".loan-desc-container").classList.add("d-none");
+     //hide the "Upload LPO block"
+     loanForm.querySelector(".lpo-container").classList.add("d-none");
+     //hide the "Upload Proforma Invoice" block
+     loanForm.querySelector(".proforma-container").classList.add("d-none");
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////

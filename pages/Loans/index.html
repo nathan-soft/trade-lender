@@ -61,7 +61,7 @@
     </aside>
 
     <main class="main">
-        <section class="page-title-bar d-flex flex-wrap justify-content-between mb-3">
+        <section class="loan-title-bar page-title-bar d-flex flex-wrap justify-content-between">
             <h4 class="page-title font-weight-bold">
                 <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Loans
             </h4>
@@ -70,6 +70,11 @@
                     New Loan Request
                 </a>
             </div>
+        </section>
+
+        <section class="search-group small-screen-search-box">
+            <input class="form-control py-2" type="search" placeholder="search" id="search">
+            <span class="fa fa-search"></span>
         </section>
 
         <section class="loan-grid-container mt-3">
@@ -114,7 +119,7 @@
 
 
             <!-- GRID SECTION -->
-            <section class="table-responsive-lg mt-3 loan-applicathgions table-wrapper">
+            <section class="table-responsive-lg mt-3">
                 <div id="allLoanApplications">
                     <table class="table">
                         <thead class="thead-light">
@@ -134,7 +139,7 @@
                                 <td>90 days</td>
                                 <td>15%</td>
                                 <td class="text-info">Pending</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a bill</td>
@@ -142,7 +147,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-info">Pending</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a supplier</td>
@@ -150,7 +155,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-info">Pending</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -158,7 +163,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-info">Pending</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Expand my business</td>
@@ -166,7 +171,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-danger">Declined</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -174,7 +179,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-danger">Declined</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -182,7 +187,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-danger">Declined</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -207,7 +212,7 @@
                                 <td>90 days</td>
                                 <td>15%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a bill</td>
@@ -215,7 +220,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a supplier</td>
@@ -223,7 +228,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -231,7 +236,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Expand my business</td>
@@ -239,7 +244,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -247,7 +252,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -255,7 +260,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Active</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -280,7 +285,7 @@
                                 <td>90 days</td>
                                 <td>15%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a bill</td>
@@ -288,7 +293,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a supplier</td>
@@ -296,7 +301,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -304,7 +309,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Expand my business</td>
@@ -312,7 +317,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -320,7 +325,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -328,7 +333,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-error">Unpaid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                         </tbody>
                     </table>
@@ -353,7 +358,7 @@
                                 <td>90 days</td>
                                 <td>15%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a bill</td>
@@ -361,7 +366,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay a supplier</td>
@@ -369,7 +374,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -377,7 +382,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Expand my business</td>
@@ -385,7 +390,7 @@
                                 <td>30 days</td>
                                 <td>5%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -393,7 +398,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                             <tr>
                                 <td class="text-primary">Pay salary</td>
@@ -401,7 +406,7 @@
                                 <td>60 days</td>
                                 <td>10%</td>
                                 <td class="text-success">Paid</td>
-                                <td><button class="btn btn-sm">View More</button></td>
+                                <td><a href="View.html" class="btn btn-sm">View More</a></td>
                             </tr>
                         </tbody>
                     </table>

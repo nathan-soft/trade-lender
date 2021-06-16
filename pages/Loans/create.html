@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Guarantor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/site.css">
+</head>
+
+<body>
+    <aside class="sidebar-wrapper bg-primary">
+        <nav class="navbar flex-column align-items-start">
+            <a href="javascript:void(0)" class="closebtn d-lg-none" onclick="closeNav()">&times;</a>
+            <div class="brand text-center w-100">
+                <h5 class="text-white font-weight-bold">TRADE</h5>
+                <h5 class="text-success font-weight-bold">LENDER</h5>
+            </div>
+            <hr>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dashboard/index.html">
+                        <i class="fa fa-pie-chart pr-1"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Loans/index.html">
+                        <i class="fa fa-signal pr-1"></i> Loans
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Guarantors/index.html">
+                        <i class="fa fa-users pr-1"></i> Guarantors
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Notification/index.html">
+                        <i class="fa fa-bell pr-1"></i> Notifications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Integrations/index.html">
+                        <i class="fa fa-cog pr-1"></i> Integrations
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user pr-1"></i> Account</a>
+                </li>
+
+                <hr>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-sign-out pr-1"></i> Logout</a>
+                </li>
+            </ul>
+            <div class="user-profile d-flex flex-wrap px-3 align-items-center">
+                <img src="../../images/user-1.jpg" class="user-profile-img rounded-circle vertical-align-middle"
+                    height="34" width="34" alt="user-image">
+                <p class="user-profile-name h6 pl-3 mb-0">Robert Fox</p>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <section class="page-title-bar d-flex flex-wrap justify-content-between">
+            <h4 class="page-title font-weight-bold">
+                <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Loans
+            </h4>
+        </section>
+
+        <h6 class="go-back font-weight-bold text-primary">
+            <i class="fa fa-long-arrow-left pr-2"></i> Back
+        </h6>
+
+        <h4 class="page-sub-title font-weight-bold">
+            Request new loan
+        </h4>
+
+        <form id="createLoan" class="row trade-lender-form mt-4">
+            <section class="col-md-5 col-sm-6">
+                <div class="form-group">
+                    <label for="title">How much do you need?</label>
+                    <input type="text" class="form-control" placeholder="hhng ndb" id="title" name="title">
+                </div>
+                
+                <div class="form-group">
+                    <label for="loanDuration">Loan Duration</label>
+                    <select class="form-control" name="loanDuration" id="loanDuration">
+                        <option value=""></option>
+                        <option value="30 days">30 days</option>
+                        <option value="60 days">60 days</option>
+                        <option value="90 days">90 days</option>
+                        <option value="180 days">180 days</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="loanFor">What do you need it for</label>
+                    <select class="form-control" name="loanFor" id="loanFor">
+                        <option value=""></option>
+                        <option value="Working Capitals">Working Capitals</option>
+                        <option value="LPO">LPO</option>
+                        <option value="Pay a Supplier">Pay a Supplier</option>
+                        <option value="Pay Salary">Pay Salary</option>
+                        <option value="Expand My Business">Expand My Business</option>
+                        <option value="Purchase Inventory">Purchase Inventory</option>
+                        <option value="Purchase Equipment">Purchase Equipment</option>
+                    </select>
+                </div>
+                <div class="form-group loan-desc-container d-none">
+                    <label for="reason">Reason</label>
+                    <textarea class="form-control" name="reason" id="reason" rows="5"></textarea>
+                </div>
+
+                <div class="form-group lpo-container d-none">
+                    <label for="cac7">Upload Local Purchasing Order(LPO)</label>
+                    <div class="drag-area bg-white">
+                        <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                        <p>Drag your file here or <button type="button">browse</button></p>
+                        <p class="upload-format-wrapper">
+                            File format JPEG, PNG, PDF
+                            <span class="d-block">Size 15mb max</span>
+                        </p>
+                        <input type="file" id="lpoFileUpload" name="lpoFileUpload" hidden>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-5 col-sm-6">
+                <div class="form-group proforma-container d-none mb-3 mb-sm-5">
+                    <label for="cac7">Upload Proforma Invoice</label>
+                    <div class="drag-area bg-white">
+                        <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                        <p>Drag your file here or <button type="button">browse</button></p>
+                        <p class="upload-format-wrapper">
+                            File format JPEG, PNG, PDF
+                            <span class="d-block">Size 15mb max</span>
+                        </p>
+                        <input type="file" id="proformaFileUpload" name="proformaFileUpload" hidden>
+                    </div>
+                </div>
+                <div class="loan-eligibility-block">
+                    <div class="icon-block">
+                        <img src="../../images/Loan-eligibility-icon.png" 
+                            class="mb-1" height="54" width="54" alt="Loan Eligibility Icon">
+                    </div>
+                    <h6 class="font-weight-bold">Loan Offer</h6>
+                    <p class="text-wrapper">
+                        You are eligible for a loan of about
+                        <span class="d-block text-center">₦20,000,000</span>
+                    </p>
+                </div>
+            </section>
+            <section class="col-12 col-md-5 col-sm-6 action text-center mt-4">
+                <button type="submit" class="btn btn-block btn-primary py-3">Submit</button>
+            </section>
+
+            <div class="loan-eligibility-block-small-screen">
+                <div class="icon-block">
+                    <img src="../../images/Loan-eligibility-icon.png" class="mb-1" height="54" width="54"
+                        alt="Loan Eligibility Icon">
+                </div>
+                <h6 class="font-weight-bold">Loan Offer</h6>
+                <p class="text-wrapper">
+                    You are eligible for a loan of about
+                    <span class="d-block text-center">₦20,000,000</span>
+                </p>
+            </div>
+        </form>
+
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/site.js"></script>
+</body>
+
+</html>

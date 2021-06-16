@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Guarantor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/site.css">
+</head>
+
+<body>
+    <aside class="sidebar-wrapper bg-primary">
+        <nav class="navbar flex-column align-items-start">
+            <a href="javascript:void(0)" class="closebtn d-lg-none" onclick="closeNav()">&times;</a>
+            <div class="brand text-center w-100">
+                <h5 class="text-white font-weight-bold">TRADE</h5>
+                <h5 class="text-success font-weight-bold">LENDER</h5>
+            </div>
+            <hr>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dashboard/index.html">
+                        <i class="fa fa-pie-chart pr-1"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../Loans/index.html">
+                        <i class="fa fa-signal pr-1"></i> Loans
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Guarantors/index.html">
+                        <i class="fa fa-users pr-1"></i> Guarantors
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Notification/index.html">
+                        <i class="fa fa-bell pr-1"></i> Notifications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Integrations/index.html"><i class="fa fa-cog pr-1"></i>
+                        Integrations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-user pr-1"></i> Account</a>
+                </li>
+
+                <hr>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-sign-out pr-1"></i> Logout</a>
+                </li>
+            </ul>
+            <div class="user-profile d-flex flex-wrap px-3 align-items-center">
+                <img src="../../images/user-1.jpg" class="user-profile-img rounded-circle vertical-align-middle"
+                    height="34" width="34" alt="user-image">
+                <p class="user-profile-name h6 pl-3 mb-0">Robert Fox</p>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <section class="loan-view-title-bar page-title-bar d-flex flex-wrap justify-content-between">
+            <h4 class="page-title font-weight-bold">
+                <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Loans
+            </h4>
+        </section>
+
+        <section class="go-back-group d-flex justify-content-between">
+            <h6 class="go-back font-weight-bold text-primary">
+                <i class="fa fa-long-arrow-left pr-2"></i> Back
+            </h6>
+        </section>
+
+
+        <div class="row no-gutters" id="loanView">
+            <section class="col-md-5 col-sm-6 mr-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-1">Reason</p>
+                        <h6 class=" card-text text-primary mb-0">Marketing</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-1">Loan Terms</p>
+                        <h6 class="card-text mb-0">90 days</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-1">Payback Date</p>
+                        <ul class="card-text mb-0 ml-4">
+                            <li>11/03/2021</li>
+                            <li>11/04/2021</li>
+                            <li>11/05/2021</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-5 col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-1">Amount</p>
+                        <h6 class=" card-text mb-0" style="color: #262626;">₦50,000,000,000.00</h6>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-title mb-1">Interest</p>
+                        <h6 class="card-text mb-0">15%</h6>
+                    </div>
+                </div>
+                <div class="card loan-status-container">
+                    <div class="card-body">
+                        <p class="card-title mb-1">Status</p>
+                        <!-- YOU CAN ONLY HAVE ONE "CARD-TEXT" OR "H6" HERE PER PAGE -->
+                        <!-- THIS IS BECAUSE, A LOAN CAN ONLY HAVE ONE STATE (PENDING OR APPROVED) -->
+                        <h6 class="card-text mb-0 text-success">Approved</h6>
+                        <h6 class="card-text text-warning mb-0 d-none">Pending</h6>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-5 col-sm-6 view-offer-letter-container">
+                <a href="./offerLetter.html" class="btn btn-block btn-secondary">View offer letter</a>
+            </section>
+        </div>
+
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/site.js"></script>
+</body>
+
+</html>
