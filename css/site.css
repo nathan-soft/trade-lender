@@ -1241,6 +1241,21 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     }
 }
 
-pre {
+
+/************************************* LOAN OFFER LETTER PAGE ****************************************/
+#loanOfferLetter {
+    font-size: 14px;
+}
+
+#loanOfferLetter pre {
     white-space: pre-line;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#loanOfferLetter ol.condition-list {
+    list-style-position: inside;
+}
+#loanOfferLetter ol.condition-list li {
+    margin-top: .5em;
 }
