@@ -1245,6 +1245,7 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 /************************************* LOAN OFFER LETTER PAGE ****************************************/
 #loanOfferLetter {
     font-size: 14px;
+    color:#181819;
 }
 
 #loanOfferLetter pre {
@@ -1258,4 +1259,13 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 }
 #loanOfferLetter ol.condition-list li {
     margin-top: .5em;
+}
+
+#loanOfferLetter .custom-control-label{
+    color: #181819;
+}
+
+#loanOfferLetter .custom-control-label::before,
+#loanOfferLetter .custom-control-label::after {
+    top: .1rem;
 }
