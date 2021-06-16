@@ -1269,3 +1269,15 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 #loanOfferLetter .custom-control-label::after {
     top: .1rem;
 }
+
+@media (max-width:440px) {
+    #loanOfferLetter .director-signature-block {
+        flex-direction: column;
+        text-align: left!important;
+    }
+
+    #loanOfferLetter .director-signature-block section:last-child {
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+}
