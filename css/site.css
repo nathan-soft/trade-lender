@@ -1270,7 +1270,7 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     top: .1rem;
 }
 
-@media (max-width:440px) {
+@media (max-width:417px) {
     #loanOfferLetter .director-signature-block {
         flex-direction: column;
         text-align: left!important;
