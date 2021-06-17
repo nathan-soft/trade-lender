@@ -71,24 +71,24 @@
             </h4>
         </section>
 
-        <section id="accountEditTabsContainer" class="mt-4">
-            <section class="accountEdit-navigation-container mb-4">
-                <nav class="accountEdit-navigation-bar">
+        <section id="accountEditTabsContainer" class="accountTabsContainer mt-4">
+            <section class="account-navigation-container mb-4">
+                <nav class="account-navigation-bar">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Personal</a>
+                            <a class="nav-link active" href="#personalDetails">Personal</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Business</a>
+                            <a class="nav-link" href="#businessDetails">Business</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Financial</a>
+                            <a class="nav-link" href="#financialDetails">Financial</a>
                         </li>
                     </ul>
                 </nav>
             </section>
             
-            <form id="personalDetails" class="tab-item row trade-lender-form justify-content-center d-none">
+            <form id="personalDetails" class="tab-item row trade-lender-form justify-content-center active">
                 <section class="col-md-5 col-sm-6">
                     <div class="form-group">
                         <label for="title">Title</label>
@@ -219,7 +219,7 @@
                     </section>
                 </section>
             </form>
-            <form id="businessDetails" class="tab-item row trade-lender-form justify-content-center d-none">
+            <form id="businessDetails" class="tab-item row trade-lender-form justify-content-center">
                 <section class="col-md-5 col-sm-6">
                     <div class="form-group">
                         <label for="typeOfBusiness">Type of business</label>
@@ -406,7 +406,7 @@
                         </p>
                         <input type="file" id="fileUpload" name="fileUpload" hidden>
                     </div>
-                    <section class="action text-center mt-5 mt-sm-4">
+                    <section class="action text-center mt-0 mt-sm-4">
                         <button type="submit" class="btn w-75 btn-primary">Save Changes</button>
                     </section>
                 </section>

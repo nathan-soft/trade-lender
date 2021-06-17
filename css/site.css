@@ -1285,57 +1285,73 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 
 /************************************* ACCOUNT EDIT PAGE ****************************************/
 
-#accountEditTabsContainer{
+.accountTabsContainer {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar {
+.accountTabsContainer .tab-item:not(.accountTabsContainer .tab-item.active){
+    display: none;
+}
+
+.account-navigation-container .account-navigation-bar {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #EDEBF9;
     height: 50px;
 }
 
-#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link {
+.account-navigation-container .account-navigation-bar .nav-link {
     position: relative;
     color: #94979B;
 }
 
-#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link.active,
-#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link:hover {
+.account-navigation-container .account-navigation-bar .nav-link.active,
+.account-navigation-container .account-navigation-bar .nav-link:hover {
     color: #24348B;
 }
 
-#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link.active::before,
-#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link:hover::before {
+.account-navigation-container .account-navigation-bar .nav-link.active::before,
+.account-navigation-container .account-navigation-bar .nav-link:hover::before {
     content: "";
     position: absolute;
     color: #24348B;
     background-color: #24348B;
     height: 2px;
-    width: 100%;
-    left:0;
+    width: 92%;
+    right:5px;
     bottom: -6px;
 }
 
 @media (min-width: 768px){
-    #accountEditTabsContainer {
+    .accountTabsContainer {
         max-width: 90%;
         border: 1px solid #EDEBF9;
     }
 }
 
 @media (min-width: 1200px){
-    #accountEditTabsContainer{
+    .accountTabsContainer {
         max-width: 83%;
         /* padding-left: 30px; */
     }
 }
 
 @media (min-width: 1700px) {
-    #accountEditTabsContainer {
+    .accountTabsContainer {
         max-width: 1131px;
+    }
+}
+
+@media (max-width: 435px) {
+    .accountTabsContainer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .account-navigation-container .account-navigation-bar .nav {
+        justify-content: space-between;
+        flex-basis: 100%;
     }
 }
 

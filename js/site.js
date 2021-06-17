@@ -159,6 +159,34 @@ function hideNonEssentialControls(){
 }
 
 
+
+
+///////////////////////////////////////////////////////////////////////////////
+///////////////////////////// ACCOUNT PAGE START ///////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+
+document.querySelectorAll(".account-navigation-bar .nav-link").forEach(element => {
+    //attach clicck event to anchor tags
+    element.addEventListener("click", (e) => {
+        e.preventDefault();
+        //get the parent "li"
+        let parentLi = element.parentElement;
+        //get active anchor tag.
+        //and remove active class.
+        parentLi.parentElement.querySelector("a.active").classList.remove("active");
+        //get the href of the clicked anchor tag.
+        let elementHref = element.getAttribute("href");
+        //hide the form that's currently showing.
+        let tabContainer = document.querySelector(".accountTabsContainer");
+        tabContainer.querySelector(".tab-item.active").classList.remove("active");
+        //show the form whoose "ID" value equals the href value.
+        tabContainer.querySelector(`${elementHref}`).classList.add("active");
+        //make the clicked anchor the active one.
+        element.classList.add("active");
+    });
+});
+
+
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// UPLOAD SESCTION START ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
