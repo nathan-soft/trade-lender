@@ -1290,15 +1290,45 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     padding-right: 15px;
 }
 
+.account-profile-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.account-profile-image-container .profile-image-wrapper {
+    position: relative;
+    width: 102px;
+    height: 102px;
+    background-color: #FFFFFF;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    /* overflow: hidden; */
+}
+
+.account-profile-image-container .profile-image-wrapper .change-profile-image-wrapper {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #5F24B8;
+    border: 1px solid #FFFFFF;
+    bottom:-3px;
+    right: -3px;
+    border-radius: 50%;
+    z-index:30;
+}
+
 .accountTabsContainer .tab-item:not(.accountTabsContainer .tab-item.active){
     display: none;
 }
 
 .account-navigation-container .account-navigation-bar {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     border-bottom: 1px solid #EDEBF9;
-    height: 50px;
+    height: 55px;
 }
 
 .account-navigation-container .account-navigation-bar .nav-link {
@@ -1320,7 +1350,14 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     height: 2px;
     width: 92%;
     right:5px;
-    bottom: -6px;
+    bottom: -1.5px;
+}
+
+.accountTabsContainer .form-control {
+    color: #6E7191;
+    background-color: #FFFFFF;
+    border: 1px solid #CCC3D9;
+    border-radius: 10px;
 }
 
 @media (min-width: 768px){
@@ -1328,17 +1365,23 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
         max-width: 90%;
         border: 1px solid #EDEBF9;
     }
+
+    .account-profile-image-container {
+        max-width: 90%;
+    }
 }
 
 @media (min-width: 1200px){
-    .accountTabsContainer {
+    .accountTabsContainer,
+    .account-profile-image-container {
         max-width: 83%;
         /* padding-left: 30px; */
     }
 }
 
 @media (min-width: 1700px) {
-    .accountTabsContainer {
+    .accountTabsContainer,
+    .account-profile-image-container {
         max-width: 1131px;
     }
 }
