@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/site.css">
+</head>
+
+<body>
+    <aside class="sidebar-wrapper bg-primary">
+        <nav class="navbar flex-column align-items-start">
+            <a href="javascript:void(0)" class="closebtn d-lg-none" onclick="closeNav()">&times;</a>
+            <div class="brand text-center w-100">
+                <h5 class="text-white font-weight-bold">TRADE</h5>
+                <h5 class="text-success font-weight-bold">LENDER</h5>
+            </div>
+            <hr>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dashboard/index.html">
+                        <i class="fa fa-pie-chart pr-1"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Loans/index.html">
+                        <i class="fa fa-signal pr-1"></i> Loans
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Guarantors/index.html">
+                        <i class="fa fa-users pr-1"></i> Guarantors
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Notification/index.html">
+                        <i class="fa fa-bell pr-1"></i> Notifications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Integrations/index.html">
+                        <i class="fa fa-cog pr-1"></i> Integrations
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="fa fa-user pr-1"></i> Account</a>
+                </li>
+
+                <hr>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-sign-out pr-1"></i> Logout</a>
+                </li>
+            </ul>
+            <div class="user-profile d-flex flex-wrap px-3 align-items-center">
+                <img src="../../images/user-1.jpg" class="user-profile-img rounded-circle vertical-align-middle"
+                    height="34" width="34" alt="user-image">
+                <p class="user-profile-name h6 pl-3 mb-0">Robert Fox</p>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main bg-white">
+        <section class="page-title-bar d-flex flex-wrap justify-content-between">
+            <h4 class="page-title font-weight-bold">
+                <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Account
+            </h4>
+        </section>
+
+        <section id="accountEditTabsContainer" class="mt-4">
+            <section class="accountEdit-navigation-container mb-4">
+                <nav class="accountEdit-navigation-bar">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Personal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Business</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Financial</a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+            
+            <form id="personalDetails" class="tab-item row trade-lender-form justify-content-center d-none">
+                <section class="col-md-5 col-sm-6">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" placeholder="hhng ndb" id="title" name="title">
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-sm-6">
+                            <label for="fName">First name</label>
+                            <input type="text" class="form-control" id="fName" name="fName">
+                        </div>
+            
+                        <div class="col-sm-6">
+                            <label for="lName">Last name</label>
+                            <input type="text" class="form-control" id="lName" name="lName">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address</label>
+                        <input type="email" class="form-control" id="emailAddress" name="emailAddress">
+                    </div>
+                    <div class="form-group">
+                        <label for="positionInCompany">Position In Company</label>
+                        <input type="text" class="form-control" id="positionInCompany" name="positionInCompany">
+                    </div>
+                    <div class="form-group">
+                        <label for="shareInCompany">Share In Company</label>
+                        <input type="text" class="form-control" id="shareInCompany" name="shareInCompany">
+                    </div>
+                    <div class="form-group">
+                        <label for="DOB">Date of birth</label>
+                        <input type="date" class="form-control" id="DOB" name="DOB">
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select class="form-control" id="gender" name="gender">
+                            <option value=""></option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="bvn">BVN (Bank Verification Number)</label>
+                        <input type="text" class="form-control" id="bvn" name="bvn">
+                    </div>
+                    <div class="form-group">
+                        <label for="identificationType">Identification Type</label>
+                        <select class="form-control" id="identificationType" name="identificationType">
+                            <option value=""></option>
+                            <option value="International Passport">International Passport</option>
+                            <option value="Driver's License">Driver's License</option>
+                            <option value="NIN">NIN</option>
+                            <option value="Voter's Card">Voter's Card</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="idNumber">ID number</label>
+                        <input type="text" class="form-control" id="idNumber" name="idNumber">
+                    </div>
+                </section>
+                <section class="col-md-5 col-sm-6 d-flex flex-column">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select name="country"
+                            class="form-control countries order-alpha include-AF-AL-DZ-BE-BO-CM-CV-GM-KE-MG-NG-TG-UG-ZW"
+                            id="countryId">
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-sm-6">
+                            <label for="fName">State</label>
+                            <select name="state" class="form-control states order-alpha" id="stateId">
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+            
+                        <div class="col-sm-6">
+                            <label for="lName">LGA</label>
+                            <select name="city" class="form-control cities order-alpha" id="cityId">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="residentialStatus">Residential Status</label>
+                        <select class="form-control" id="residentialStatus" name="residentialStatus">
+                            <option value=""></option>
+                            <option value="Home Owned">Home Owned</option>
+                            <option value="Tempoary or Rented">Temporary or Rented</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="maritalStatus">Marital Status</label>
+                        <select class="form-control" id="maritalStatus" name="maritalStatus">
+                            <option value=""></option>
+                            <option value="Married">Married</option>
+                            <option value="Single">Single</option>
+                            <option value="Divorced or Widowed">Divorced or Widowed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="wdymtta">When Did You Move To This Address?</label>
+                        <input type="text" class="form-control" id="wdymtta" name="wdymtta">
+                    </div>
+                    <div class="form-group">
+                        <label for="noOfDependents">Number Of Dependents</label>
+                        <input type="text" class="form-control" id="noOfDependents" name="noOfDependents">
+                    </div>
+                    <div class="form-group">
+                        <label for="educationalLevel">Educational Level</label>
+                        <select class="form-control" id="educationalLevel" name="educationalLevel">
+                            <option value=""></option>
+                            <option value="Primary School">Primary School</option>
+                            <option value="Secondary School (O'level)">Secondary School (O'level)</option>
+                            <option value="Ordinary National Diploma (OND)">Ordinary National Diploma (OND)</option>
+                            <option value="Higher National Diploma (HND)">Higher National Diploma (HND)</option>
+                            <option value="Msc">Msc</option>
+                            <option value="Pgd">Pgd</option>
+                            <option value="PhD">PhD</option>
+                        </select>
+                    </div>
+                    <section class="form-group action text-center mt-4 mt-sm-auto">
+                        <button type="submit" class="btn btn-block py-2 btn-primary">Save Changes</button>
+                    </section>
+                </section>
+            </form>
+            <form id="businessDetails" class="tab-item row trade-lender-form justify-content-center d-none">
+                <section class="col-md-5 col-sm-6">
+                    <div class="form-group">
+                        <label for="typeOfBusiness">Type of business</label>
+                        <select class="form-control" id="typeOfBusiness" name="typeOfBusiness">
+                            <option value=""></option>
+                            <option value="Unspecified">Unspecified</option>
+                            <option value="Sole Propritorship">Sole Propritorship</option>
+                            <option value="Partnership">Partnership</option>
+                            <option value="Limited Liability Company">Limited Liability Company</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nameOfBusiness">Name of business</label>
+                        <input type="text" class="form-control" id="nameOfBusiness" name="nameOfBusiness">
+                    </div>
+                    <div class="form-group">
+                        <label for="businessRegistered2">Is the business registered</label>
+                        <select class="form-control" id="businessRegistered2" name="businessRegistered2">
+                            <option value=""></option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="rcNumber">RC/BN number</label>
+                        <input type="email" class="form-control" id="rcNumber" name="rcNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="DOBEstablishment">Date of business establishment</label>
+                        <input type="date" class="form-control" id="DOBEstablishment" name="DOBEstablishment">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Business address</label>
+                        <input type="text" class="form-control" id="address" name="address">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country</label>
+                        <select name="country"
+                            class="form-control countries order-alpha include-AF-AL-DZ-BE-BO-CM-CV-GM-KE-MG-NG-TG-UG-ZW"
+                            id="countryId">
+                            <option value="">Select Country</option>
+                        </select>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-sm-6">
+                            <label for="fName">State</label>
+                            <select name="state" class="form-control states order-alpha" id="stateId">
+                                <option value="">Select State</option>
+                            </select>
+                        </div>
+            
+                        <div class="col-sm-6">
+                            <label for="lName">LGA</label>
+                            <select name="city" class="form-control cities order-alpha" id="cityId">
+                                <option value="">Select City</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="wdymttas">When did you move to this address?</label>
+                        <input type="text" class="form-control" id="wdymttas" name="wdymttas">
+                    </div>
+                    <div class="form-group">
+                        <label for="ownedOrRented">Is your business owned or rented?</label>
+                        <select class="form-control" name="ownedOrRented" id="ownedOrRented">
+                            <option value=""></option>
+                            <option value="Owned">Owned</option>
+                            <option value="Rented">Rented</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="col-md-5 col-sm-6">
+                    <div class="form-group">
+                        <label for="noOfOutlets">Number of outlets</label>
+                        <input type="text" class="form-control" id="noOfOutlets" name="noOfOutlets">
+                    </div>
+                    <div class="form-group">
+                        <label for="totalNumberOfEmployees">Total number of employees</label>
+                        <input type="text" class="form-control" id="totalNumberOfEmployees" name="totalNumberOfEmployees">
+                    </div>
+                    <div class="form-group">
+                        <label for="howDoYouSell">How do you sell?</label>
+                        <select class="form-control" name="howDoYouSell" id="howDoYouSell">
+                            <option value=""></option>
+                            <option value="I sell online (jumia, konga etc)">I sell online (jumia, konga etc)</option>
+                            <option value="I distribute FMCG goods">I distribute FMCG goods</option>
+                            <option value="I buy and sell agro-commodities">I buy and sell agro-commodities</option>
+                            <option value="I have a physical shop">I have a physical shop</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Which industry does your business belong to?</label>
+                        <select class="form-control" name="industry" id="industry">
+                            <option value=""></option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Autos">Autos</option>
+                            <option value="Beauty Products">Beauty Products</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Food & Beverages">Food & Beverages</option>
+                            <option value="Furniture & Fittings">Furniture & Fittings</option>
+                            <option value="Health & Pharma Products">Health & Pharma Products</option>
+                            <option value="Electronics">Electronics</option>
+                            <option value="Household Appliances">Household Appliances</option>
+                            <option value="Industrialgoods">Industrialgoods</option>
+                            <option value="Office Supplies">Office Supplies</option>
+                            <option value="Packaging and Plastic">Packaging and Plastic</option>
+                            <option value="Personal Care">Personal Care</option>
+                            <option value="Consulting Services">Consulting Services</option>
+                            <option value="Education">Education</option>
+                            <option value="Home Services">Home Services</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="Media and Entertainments">Media and Entertainments</option>
+                            <option value="Professional Services">Professional Services</option>
+                            <option value="Tecnology Services">Tecnology Services</option>
+                            <option value="Utility Services">Utility Services</option>
+                            <option value="Agency Banking">Agency Banking</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlySales">Average monthly sales</label>
+                        <select class="form-control" name="monthlySales" id="monthlySales">
+                            <option value=""></option>
+                            <option value="0-1M">0-1M</option>
+                            <option value="1-5M">1-5M</option>
+                            <option value="6-10M">6-10M</option>
+                            <option value="11-20M">11-20M</option>
+                            <option value="21-40M">21-40M</option>
+                            <option value=">40M">>40M</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="monthlyExpenses">Average monthly expenses</label>
+                        <select name="monthlyExpenses" class="form-control" id="monthlyExpenses">
+                            <option value=""></option>
+                            <option value="0-1M">0-1M</option>
+                            <option value="1-5M">1-5M</option>
+                            <option value="6-10M">6-10M</option>
+                            <option value="11-20M">11-20M</option>
+                            <option value="21-40M">21-40M</option>
+                            <option value=">40M">>40M</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">How long have you been in business?</label>
+                        <select name="country" class="form-control" id="countryId">
+                            <option vlaue=""></option>
+                            <option value="0-1">0 -1</option>
+                            <option value="1-3">1-3</option>
+                            <option value="3-5">3-5</option>
+                            <option value="5-10">5-10</option>
+                            <option value="10+">10+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="tin">Tax Identification Number(TIN)</label>
+                        <input type="text" class="form-control" id="tin" name="tin">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyRole">CAC7</label>
+                        <input type="text" class="form-control" id="companyRole" name="companyRole">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyRole">CAC2</label>
+                        <input type="text" class="form-control" id="companyRole" name="companyRole">
+                    </div>
+                    <div class="form-group">
+                        <label for="identificationType2">Identification type</label>
+                        <select class="form-control" name="identificationType2" id="identificationType2">
+                            <option value=""></option>
+                            <option value="International Passport">International Passport</option>
+                            <option value="Driver's License">Driver's License</option>
+                            <option value="NIN">NIN</option>
+                            <option value="Voter's Card">Voter's Card</option>
+                        </select>
+                    </div>
+                </section>
+                <section class="form-group col-md-5 col-sm-6 mt-4">
+                    <div class="drag-area d-none d-sm-block">
+                        <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                        <p>Drag your file here or <button type="button">browse</button></p>
+                        <p class="upload-format-wrapper">
+                            File format JPEG, PNG
+                            <span class="d-block">PDF Size 15mb max</span>
+                        </p>
+                        <input type="file" id="fileUpload" name="fileUpload" hidden>
+                    </div>
+                    <section class="action text-center mt-5 mt-sm-4">
+                        <button type="submit" class="btn w-75 btn-primary">Save Changes</button>
+                    </section>
+                </section>
+            </form>
+            <form id="financialDetails" class="tab-item row trade-lender-form justify-content-center">
+                <section class="col-md-5 col-sm-6">
+                    <div class="form-group">
+                        <label for="bankName">Bank name</label>
+                        <input type="text" class="form-control" id="bankName" name="bankName">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountName">Bank account name</label>
+                        <input type="text" class="form-control" id="accountName" name="accountName">
+                    </div>
+                    <div class="form-group">
+                        <label for="accountNumber">Bank account number</label>
+                        <input type="text" class="form-control" id="accountNumber" name="accountNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="hasOnlineBanking">Has online banking?</label>
+                        <select class="form-control" name="hasOnlineBanking" id="hasOnlineBanking">
+                            <option value=""></option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="lpoFileUpload">Upload Local Purchasing Order</label>
+                        <div class="drag-area">
+                            <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                            <p>Drag your file here or <button type="button">browse</button></p>
+                            <p class="upload-format-wrapper">
+                                File format JPEG, PNG
+                                <span class="d-block">PDF Size 15mb max</span>
+                            </p>
+                            <input type="file" id="lpoFileUpload" name="lpoFileUpload" hidden>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastLoanPeriod">Have you taken out a loan in the past 12 months?</label>
+                        <input type="text" class="form-control" id="lastLoanPeriod" name="lastLoanPeriod">
+                    </div>
+                </section>
+                <section class="col-md-5 col-sm-6 d-flex flex-column">
+                    <div class="form-group">
+                        <label for="proformaInvoiceFileUpload">Upload Proforma invoice</label>
+                        <div class="drag-area">
+                            <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                            <p>Drag your file here or <button type="button">browse</button></p>
+                            <p class="upload-format-wrapper">
+                                File format JPEG, PNG
+                                <span class="d-block">PDF Size 15mb max</span>
+                            </p>
+                            <input type="file" id="proformaInvoiceFileUpload" name="proformaInvoiceFileUpload" hidden>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="idNumber">If yes, how much?</label>
+                        <input type="text" class="form-control" id="idNumber" name="idNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="bankStatementFileUpload">Upload bank statement</label>
+                        <div class="drag-area">
+                            <div class="icon"><i class="fa fa-cloud-upload"></i></div>
+                            <p>Drag your file here or <button type="button">browse</button></p>
+                            <p class="upload-format-wrapper">
+                                File format JPEG, PNG
+                                <span class="d-block">PDF Size 15mb max</span>
+                            </p>
+                            <input type="file" id="bankStatementFileUpload" name="bankStatementFileUpload" hidden>
+                        </div>
+                    </div>
+                    <div class="form-group action text-center mt-4 mt-sm-auto">
+                        <button type="button" class="btn btn-block py-2 btn-primary">Save Changes</button>
+                    </div>
+                </section>
+            </form>
+        </section>
+        
+       
+
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="//geodata.solutions/includes/countrystatecity.js"></script>
+    <script src="../../js/site.js"></script>
+</body>
+
+</html>

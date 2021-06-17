@@ -63,7 +63,7 @@ function goToNextTab() {
 ///////////////////////////////////////////////////////////////////////////////
 
 document.querySelectorAll(".loan-grid-navigation-bar .nav-link").forEach(element =>{
-    element.addEventListener("click", goToNextTab);
+    element.addEventListener("click", showNextTab);
 });
 
 //add change event listener to dropdown.
@@ -78,7 +78,7 @@ if (dropdown != null) {
     });
 }
 
-function goToNextTab(e) {
+function showNextTab(e) {
     //prevent default anchor element behaviour.
     e.preventDefault();
     let anchorParent = e.target.parentElement;

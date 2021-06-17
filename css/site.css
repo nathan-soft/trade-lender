@@ -1281,3 +1281,66 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
         margin-bottom: 2rem;
     }
 }
+
+
+/************************************* ACCOUNT EDIT PAGE ****************************************/
+
+#accountEditTabsContainer{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EDEBF9;
+    height: 50px;
+}
+
+#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link {
+    position: relative;
+    color: #94979B;
+}
+
+#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link.active,
+#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link:hover {
+    color: #24348B;
+}
+
+#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link.active::before,
+#accountEditTabsContainer .accountEdit-navigation-container .accountEdit-navigation-bar .nav-link:hover::before {
+    content: "";
+    position: absolute;
+    color: #24348B;
+    background-color: #24348B;
+    height: 2px;
+    width: 100%;
+    left:0;
+    bottom: -6px;
+}
+
+@media (min-width: 768px){
+    #accountEditTabsContainer {
+        max-width: 90%;
+        border: 1px solid #EDEBF9;
+    }
+}
+
+@media (min-width: 1200px){
+    #accountEditTabsContainer{
+        max-width: 83%;
+        /* padding-left: 30px; */
+    }
+}
+
+@media (min-width: 1700px) {
+    #accountEditTabsContainer {
+        max-width: 1131px;
+    }
+}
+
+
+
+
+
+
