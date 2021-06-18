@@ -393,7 +393,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <p class="card-title mb-1">CAC Certificate</p>
-                                <h6 class="card-text text-primary-dark">Click to view</h6>
+                                <a href="#alertModal" class="card-link text-primary-dark" data-toggle="modal"
+                                    data-url="../../images/cac-sample.png">
+                                    Click to view
+                                </a>
                             </div>
                         </div>
                     </section>
@@ -415,7 +418,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <p class="card-title mb-1">Local purchasing order (LPO)</p>
-                                <h6 class="card-text text-primary-dark">Click to view</h6>
+                                <a href="#alertModal" class="card-link text-primary-dark" data-toggle="modal"
+                                    data-url="../../images/purchase-order-sample.png">
+                                    Click to view
+                                </a>
                             </div>
                         </div>
                         <div class="card">
@@ -427,7 +433,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <p class="card-title mb-1">Bank statement</p>
-                                <h6 class="card-text text-primary-dark">Click to view</h6>
+                                <a href="#alertModal" class="card-link text-primary-dark" data-toggle="modal"
+                                    data-url="../../images/bank-statement-sample.png">
+                                    Click to view
+                                </a>
                             </div>
                         </div>
                     </section>
@@ -447,7 +456,11 @@
                         <div class="card">
                             <div class="card-body">
                                 <p class="card-title mb-1">Proforma invoice</p>
-                                <h6 class="card-text text-primary-dark">Click to view</h6>
+                                <a href="#alertModal" class="card-link text-primary-dark" 
+                                    data-toggle="modal"
+                                    data-url="../../images/proforma-invoice-sample.png">
+                                    Click to view
+                                </a>
                             </div>
                         </div>
                         <div class="card">
@@ -459,6 +472,21 @@
                     </section>
                 </div>
             </section>
+
+            <!-- The Modal -->
+            <div class="modal fade alert" id="alertModal">
+                <div class="modal-dialog modal-dialkog-scrollable">
+                    <div class="modal-content">
+                        <!-- Modal body -->
+                        <div class="modal-body text-center">
+                            <span class="fa fa-times-circle closebtn" data-dismiss="modal"></span>
+                            <div class="blob-container">
+                                <img class="img-fluid" src=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 

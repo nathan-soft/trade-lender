@@ -187,6 +187,18 @@ document.querySelectorAll(".account-navigation-bar .nav-link").forEach(element =
 });
 
 
+//Load images in modal
+document.querySelectorAll("#accountViewTabsContainer .tab-item .card .card-link").forEach(element => {
+    //attach clicck event to anchor tags
+    element.addEventListener("click", (e) => {
+        //get the image url to be loaded into the dom."
+        let imageUrl = element.dataset.url;
+        //get modal to be shown
+        document.querySelector(`${element.hash}`).querySelector(".blob-container .img-fluid").src = imageUrl;
+    });
+});
+
+
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// UPLOAD SESCTION START ///////////////////////////
 ///////////////////////////////////////////////////////////////////////////////

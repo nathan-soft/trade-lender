@@ -197,10 +197,15 @@ body{
 
 .sidebar-wrapper .closebtn {
     position: absolute;
-    top: 0;
+    top: -5px;
     direction: ltr;
-    right: 15px;
+    right: 18px;
     font-size: 36px;
+}
+
+.sidebar-wrapper .closebtn:hover {
+    cursor: pointer;
+    color: #FFFFFF;
 }
 
 .sidebar-wrapper .navbar {
@@ -230,7 +235,8 @@ body{
     font-weight: 900;
     line-height: 21px;
     font-size: 17.4777px;
-    margin-top: 12px;
+    margin-top: 13px;
+    margin-bottom: 5px;
 }
 
 .sidebar-wrapper .user-profile{
@@ -427,18 +433,25 @@ form .btn-secondary:active {
     border-radius: 5px;
 }
 
-/*****************STYLES FOR CUSTOM ALERT(S)*************************/
+/*****************STYLES FOR CUSTOM MODAL/ALERT(S)*************************/
 
 .alert .closebtn {
     position: absolute;
     top: 18px;
     direction: ltr;
+    /* color:#000000; */
     right: 18px;
     font-size: 30px;
 }
+
+.alert .closebtn:hover {
+    cursor: pointer;
+}
+
 .alert .modal-content {
     border-radius: 8px;
 }
+
 .alert .modal-content .modal-body {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1522,6 +1535,16 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     }
 }
 
+
+
+/* .modal-content2 {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+} */
+
+/* data-href="image-url" */
 
 
 
