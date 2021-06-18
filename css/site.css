@@ -1283,14 +1283,11 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 }
 
 
-/************************************* ACCOUNT EDIT PAGE ****************************************/
 
-.accountTabsContainer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
+/************************************* ACCOUNT INDEX/VIEW PAGE ****************************************/
 
 .account-profile-image-container {
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -1306,7 +1303,7 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 }
 
 .account-profile-image-container .profile-image-wrapper .change-profile-image-wrapper {
-    position:absolute;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1314,13 +1311,29 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     height: 32px;
     background-color: #5F24B8;
     border: 1px solid #FFFFFF;
-    bottom:-3px;
+    bottom: -3px;
     right: -3px;
     border-radius: 50%;
-    z-index:30;
+    z-index: 30;
 }
 
-.accountTabsContainer .tab-item:not(.accountTabsContainer .tab-item.active){
+.account-profile-image-container .edit-profile-button-container {
+    position: absolute;
+    width: 140px;
+    height:40px;
+    right: 0;
+    bottom:3%;
+}
+
+.account-profile-image-container .edit-profile-button-container .btn {
+    position: relative;
+    background-color: #FFFFFF;
+    color: #24348B;
+    border: 1px solid #E6E7E9;
+    text-align: left;
+}
+
+.accountTabsContainer .tab-item:not(.accountTabsContainer .tab-item.active) {
     display: none;
 }
 
@@ -1349,9 +1362,107 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     background-color: #24348B;
     height: 2px;
     width: 92%;
-    right:5px;
+    right: 5px;
     bottom: -1.5px;
 }
+
+#accountViewTabsContainer .tab-item .card {
+    color: #130F26;
+    margin-bottom: .5rem;
+}
+
+@media (min-width:576px){
+    #accountViewTabsContainer {
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .accountTabsContainer {
+        max-width: 90%;
+        border: 1px solid #EDEBF9;
+        padding-bottom: 35px;
+    }
+
+    .account-profile-image-container {
+        max-width: 90%;
+    }
+
+    .account-navigation-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .accountTabsContainer,
+    .account-profile-image-container {
+        max-width: 83%;
+        /* padding-left: 30px; */
+    }
+}
+
+@media (min-width: 1700px) {
+
+    .accountTabsContainer,
+    .account-profile-image-container {
+        max-width: 1131px;
+    }
+}
+
+@media (min-width:576px) and (max-width:767px) {
+    #accountViewTabsContainer {
+        padding-bottom: 35px;
+    }
+
+    #accountViewTabsContainer .tab-item .col-sm-6 {
+        flex: 0 0 calc(50% - 0.25rem);
+        max-width: calc(50% - 0.25rem);
+    }
+
+    #accountViewTabsContainer .tab-item > .col-sm-6:first-of-type {
+        margin-right: 0.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    @media (min-width: 436px) {
+        #accountViewTabsContainer .tab-item > * {
+            width: 85%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .account-page-wrapper{
+        background-color: #FFFFFF;
+        /*reseting the padding on the main element*/
+        margin: -30px -15px -50px;
+        padding: 0 15px 50px;
+    }
+
+    .account-profile-image-container .edit-profile-button-container {
+        display:none;
+    }
+
+    #accountViewTabsContainer {
+        margin-left:-15px;
+        margin-right: -15px;
+    }
+}
+
+@media (max-width: 435px) {
+    .account-navigation-container .account-navigation-bar .nav {
+        justify-content: space-between;
+        flex-basis: 100%;
+    }
+}
+
+
+/************************************* ACCOUNT EDIT PAGE ****************************************/
+
+
 
 .accountTabsContainer .form-control {
     color: #6E7191;
@@ -1361,40 +1472,13 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
 }
 
 @media (min-width: 768px){
-    .accountTabsContainer {
-        max-width: 90%;
-        border: 1px solid #EDEBF9;
+    #accountEditTabsContainer {
+        padding-bottom: 20px;
     }
 
-    .account-profile-image-container {
-        max-width: 90%;
-    }
-}
-
-@media (min-width: 1200px){
-    .accountTabsContainer,
-    .account-profile-image-container {
-        max-width: 83%;
-        /* padding-left: 30px; */
-    }
-}
-
-@media (min-width: 1700px) {
-    .accountTabsContainer,
-    .account-profile-image-container {
-        max-width: 1131px;
-    }
-}
-
-@media (max-width: 435px) {
-    .accountTabsContainer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .account-navigation-container .account-navigation-bar .nav {
-        justify-content: space-between;
-        flex-basis: 100%;
+    #accountEditTabsContainer .account-navigation-container {
+         padding-left: 15px;
+         padding-right: 15px;
     }
 }
 

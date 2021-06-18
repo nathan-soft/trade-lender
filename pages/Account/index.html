@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Edit Account</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/site.css">
+</head>
+
+<body>
+    <aside class="sidebar-wrapper bg-primary">
+        <nav class="navbar flex-column align-items-start">
+            <a href="javascript:void(0)" class="closebtn d-lg-none" onclick="closeNav()">&times;</a>
+            <div class="brand text-center w-100">
+                <h5 class="text-white font-weight-bold">TRADE</h5>
+                <h5 class="text-success font-weight-bold">LENDER</h5>
+            </div>
+            <hr>
+            <ul class="navbar-nav w-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Dashboard/index.html">
+                        <i class="fa fa-pie-chart pr-1"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Loans/index.html">
+                        <i class="fa fa-signal pr-1"></i> Loans
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Guarantors/index.html">
+                        <i class="fa fa-users pr-1"></i> Guarantors
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Notification/index.html">
+                        <i class="fa fa-bell pr-1"></i> Notifications
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Integrations/index.html">
+                        <i class="fa fa-cog pr-1"></i> Integrations
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><i class="fa fa-user pr-1"></i> Account</a>
+                </li>
+
+                <hr>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-sign-out pr-1"></i> Logout</a>
+                </li>
+            </ul>
+            <div class="user-profile d-flex flex-wrap px-3 align-items-center">
+                <img src="../../images/user-1.jpg" class="user-profile-img rounded-circle vertical-align-middle"
+                    height="34" width="34" alt="user-image">
+                <p class="user-profile-name h6 pl-3 mb-0">Robert Fox</p>
+            </div>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <section class="account-page-wrapper">
+            <section class="page-title-bar d-flex flex-wrap justify-content-between">
+                <h4 class="page-title font-weight-bold">
+                    <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Account
+                </h4>
+            </section>
+            
+            <section class="account-profile-image-container">
+                <div class="profile-image-wrapper">
+                    <img src="../../images/account-image.png" alt="Profile Image" class="rounded-circle" width="102" height="102" />
+                    <div class="change-profile-image-wrapper">
+                        <img src="../../images/camera-icon.png" alt="Profile Image" class="rounded-circle" width="12"
+                            height="10.5" />
+                    </div>
+                </div>
+                <div class="edit-profile-button-container">
+                    <a href="edit.html" class="btn btn-block d-flex justify-content-between">
+                        <span >Edit Profile </span>
+                         <span><img src="../../images/edit-profile-icon.png" alt="Edit profile icon"/></span>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="accountViewTabsContainer" class="accountTabsContainer bg-white mt-4">
+                <section class="account-navigation-container mb-4">
+                    <nav class="account-navigation-bar">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#personalDetails">Personal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#businessDetails">Business</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#financialDetails">Financial</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            
+                <div id="personalDetails" class="tab-item row no-gutters justify-content-center px-3 px-md-0 active">
+                    <section class="col-md-5 col-sm-6 mr-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Title</p>
+                                <h6 class=" card-text mb-0">Mr</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Email address</p>
+                                <h6 class="card-text  mb-0">doejohn@gmail.com</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Share in the company</p>
+                                <h6 class="card-text mb-0">20%</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Gender</p>
+                                <h6 class="card-text mb-0">Male</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Identification type</p>
+                                <h6 class="card-text  mb-0">International Passport</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Address</p>
+                                <h6 class="card-text mb-0">8052 Princeton Rd. Inglewood, Maine 98380</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Country</p>
+                                <h6 class="card-text mb-0">Nigeria</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">LGA</p>
+                                <h6 class="card-text mb-0">Kosofe</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Marital status</p>
+                                <h6 class="card-text mb-0">Married</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Number of dependents</p>
+                                <h6 class="card-text mb-0">3</h6>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-md-5 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Full name</p>
+                                <h6 class="card-text mb-0">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Position in the company</p>
+                                <h6 class="card-text mb-0">Partner</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Date of birth</p>
+                                <h6 class="card-text mb-0">19/10/2018</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">BVN</p>
+                                <h6 class="card-text  mb-0">1234567890</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">ID number</p>
+                                <h6 class="card-text mb-0">DC 12340</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Gender</p>
+                                <h6 class="card-text mb-0">Male</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">State</p>
+                                <h6 class="card-text mb-0">Lagos</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Residential Status</p>
+                                <h6 class="card-text mb-0">Home Owned</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">When did you move to this address?</p>
+                                <h6 class="card-text mb-0">12/02/2002</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Educational Level</p>
+                                <h6 class="card-text mb-0">Msc</h6>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="businessDetails" class="tab-item row no-gutters justify-content-center px-3 px-md-0">
+                    <section class="col-md-5 col-sm-6 mr-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Type of business</p>
+                                <h6 class="card-text mb-0">Sole Proprietorship</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Is the business registered?</p>
+                                <h6 class="card-text mb-0">Yes</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Date of business establishment</p>
+                                <h6 class="card-text mb-0">23/10/2019</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Country</p>
+                                <h6 class="card-text  mb-0">Nigeria</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">LGA</p>
+                                <h6 class="card-text mb-0">Gwagwalada</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Are your business locations owned or rented?</p>
+                                <h6 class="card-text mb-0">Rented</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Total of employees</p>
+                                <h6 class="card-text mb-0">4</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">What do you sell?</p>
+                                <h6 class="card-text mb-0">Mobile Apps</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Average monthly sales</p>
+                                <h6 class="card-text mb-0">1-5M</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">How long have you been in business?</p>
+                                <h6 class="card-text mb-0">3 years</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">CAC7</p>
+                                <h6 class="card-text mb-0">234567890</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Identification type</p>
+                                <h6 class="card-text mb-0">International Passport</h6>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-md-5 col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Name of business</p>
+                                <h6 class="card-text mb-0">Jupita Agency</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">RC/BN number</p>
+                                <h6 class="card-text mb-0">RC 231DE</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Business address</p>
+                                <h6 class="card-text mb-0">Lagos NG, 350 - 360 Ikorodu Rd, Maryland 100211, Ikeja, Nigeria</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">State</p>
+                                <h6 class="card-text  mb-0">Abuja</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">When did you move this business?</p>
+                                <h6 class="card-text mb-0">23/10/2019</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Number of outlets</p>
+                                <h6 class="card-text">1</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">How do you do business?</p>
+                                <h6 class="card-text">Online</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">What industry does your business belong to?</p>
+                                <h6 class="card-text">Technology services</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Average monthly expenses</p>
+                                <h6 class="card-text mb-0">11-20M</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Tax Identification Number (TIN)</p>
+                                <h6 class="card-text mb-0">123455903</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">CAC2</p>
+                                <h6 class="card-text mb-0">987645342</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">CAC Certificate</p>
+                                <h6 class="card-text text-primary-dark">Click to view</h6>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div id="financialDetails" class="tab-item row no-gutters justify-content-center px-3 px-md-0">
+                    <section class="col-md-5 col-sm-6 mr-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Title</p>
+                                <h6 class=" card-text font-weight-bold mb-0">Mr</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Full name</p>
+                                <h6 class="card-text font-weight-bold mb-0">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Date of birth</p>
+                                <h6 class="card-text font-weight-bold mb-0">19/10/2018</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Email address</p>
+                                <h6 class="card-text font-weight-bold mb-0">doejohn@gmail.com</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Address</p>
+                                <h6 class="card-text font-weight-bold mb-0">8052 Princeton Rd. Inglewood, Maine 98380</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">State</p>
+                                <h6 class="card-text font-weight-bold mb-0">Lagos</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Occupation</p>
+                                <h6 class="card-text font-weight-bold mb-0">Lawyer</h6>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="col-md-5 col-sm-6 d-flex flex-column">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Title</p>
+                                <h6 class=" card-text font-weight-bold mb-0">Mr</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Full name</p>
+                                <h6 class="card-text font-weight-bold mb-0">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Date of birth</p>
+                                <h6 class="card-text font-weight-bold mb-0">19/10/2018</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Email address</p>
+                                <h6 class="card-text font-weight-bold mb-0">doejohn@gmail.com</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Address</p>
+                                <h6 class="card-text font-weight-bold mb-0">8052 Princeton Rd. Inglewood, Maine 98380</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">State</p>
+                                <h6 class="card-text font-weight-bold mb-0">Lagos</h6>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title mb-1">Occupation</p>
+                                <h6 class="card-text font-weight-bold mb-0">Lawyer</h6>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/site.js"></script>
+</body>
+
+</html>
