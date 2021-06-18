@@ -66,8 +66,25 @@
 
     <main class="main">
         <section class="account-page-wrapper">
-            <section class="page-title-bar d-flex flex-wrap justify-content-between">
-                <h4 class="page-title font-weight-bold">
+            <section class="mobile-menu d-sm-none">
+                <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i>
+                <div class="mobile-menu_brand-logo">
+                    <img src="../../images/mobile-menu-logo.png" alt="Tradelender logo">
+                </div>
+            </section>
+            <section class="page-title-bar d-flex justify-content-between">
+                <h4 class="page-title font-weight-bold d-sm-none">
+                    Account
+                </h4>
+
+                <div class="edit-profile-button-container d-sm-none">
+                    <a href="edit.html" class="btn btn-block d-flex justify-content-between">
+                        <span>Edit Profile </span>
+                        <span><img src="../../images/edit-profile-icon.png" alt="Edit profile icon" /></span>
+                    </a>
+                </div>
+
+                <h4 class="page-title font-weight-bold d-none d-sm-block">
                     <i class="fa fa-navicon pr-2 d-lg-none" style="cursor:pointer" onclick="openNav()"></i> Account
                 </h4>
             </section>
@@ -80,7 +97,7 @@
                             height="10.5" />
                     </div>
                 </div>
-                <div class="edit-profile-button-container">
+                <div class="edit-profile-button-container d-none d-sm-block">
                     <a href="edit.html" class="btn btn-block d-flex justify-content-between">
                         <span >Edit Profile </span>
                          <span><img src="../../images/edit-profile-icon.png" alt="Edit profile icon"/></span>

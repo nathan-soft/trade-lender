@@ -477,7 +477,7 @@ form .btn-secondary:active {
     }
 
     @media (max-width:520px) {
-        .page-title-bar {
+        .page-title-bar{
             flex-direction: column !important;
             margin-bottom: 1rem !important;
         }
@@ -1317,15 +1317,32 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     z-index: 30;
 }
 
+.account-profile-image-container .edit-profile-button-container,
+.account-page-wrapper .edit-profile-button-container{
+    width: 140px;
+    height:40px;
+}
+
 .account-profile-image-container .edit-profile-button-container {
     position: absolute;
     width: 140px;
-    height:40px;
+    height: 40px;
     right: 0;
-    bottom:3%;
+    bottom: 3%;
 }
 
-.account-profile-image-container .edit-profile-button-container .btn {
+.mobile-menu{
+    display: flex;
+    margin: 0 -15px 20px;
+    padding: 12px 15px;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15);
+}
+
+.account-profile-image-container .edit-profile-button-container .btn,
+.account-page-wrapper .edit-profile-button-container .btn {
     position: relative;
     background-color: #FFFFFF;
     color: #24348B;
@@ -1435,6 +1452,18 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
         }
     }
 
+    @media (max-width: 310px) {
+        .account-navigation-container .account-navigation-bar .nav-link {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 520px){
+        .account-page-wrapper .page-title-bar {
+            flex-direction: row !important;
+        }
+    } 
+
     .account-page-wrapper{
         background-color: #FFFFFF;
         /*reseting the padding on the main element*/
@@ -1442,8 +1471,8 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
         padding: 0 15px 50px;
     }
 
-    .account-profile-image-container .edit-profile-button-container {
-        display:none;
+    .account-page-wrapper .edit-profile-button-container {
+        position: relative;
     }
 
     #accountViewTabsContainer {
@@ -1479,6 +1508,13 @@ form#createLoan .loan-eligibility-block-small-screen .text-wrapper {
     #accountEditTabsContainer .account-navigation-container {
          padding-left: 15px;
          padding-right: 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    #accountEditTabsContainer.account-navigation-container {
+        padding-left: -15px;
+        padding-right: -15px;
     }
 }
 
