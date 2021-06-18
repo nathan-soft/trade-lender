@@ -198,6 +198,36 @@ document.querySelectorAll("#accountViewTabsContainer .tab-item .card .card-link"
     });
 });
 
+//CHANGE PROFILE IMAGE
+{
+    //get the "change profile image icon"
+    let changeProfileImageIcon = document.querySelector(".change-profile-image-wrapper img");
+    let uploadProfileImageInput = document.getElementById("profileImageFileUpload");
+    if (changeProfileImageIcon != null) {
+        changeProfileImageIcon.addEventListener("click", () => {
+            //call the input click handler;
+            uploadProfileImageInput.click();
+        });
+    }
+
+    uploadProfileImageInput.addEventListener("change", function () {
+        //getting the first user select file [0]
+        file = this.files[0];
+        let validExtensions = ["image/jpeg", "image/jpg", "image/png"];
+        if (verifyFileUploadType(validExtensions, file.type)) {
+            let reader = new FileReader();
+            reader.readAsDataURL(file);
+
+            reader.onload = () => {
+                //update the image url to point to the uploaded image.
+                document.getElementById("profileImage").src = reader.result;
+            }
+        } else {
+            alert("This is not a supported file type!");
+        }
+    });
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////// UPLOAD SESCTION START ///////////////////////////
@@ -261,9 +291,18 @@ function showFile(dropArea, dragText) {
         }
         fileReader.readAsDataURL(file);
     } else {
-        alert("This is not an supported file type!");
+        alert("This is not a supported file type!");
         dropArea.classList.remove("active");
         dragText.innerHTML = 'Drag your file here or <button type="button">browse</button>';
+    }
+}
+
+
+function verifyFileUploadType(validExtensions, fileType) {
+    if (validExtensions.includes(fileType)) { 
+        return true;
+    } else {
+        return false;
     }
 }
 
